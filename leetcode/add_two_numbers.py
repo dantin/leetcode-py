@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from typing import List
 
+
 # Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -9,45 +10,45 @@ class ListNode:
 
 
 class Solution:
-        def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
-            val = 0
-            dummy = ListNode()
-            tail = dummy
-            while l1 or l2:
-                if l1:
-                    val += l1.val
-                if l2:
-                    val += l2.val
-                tail.next = ListNode(val % 10)
-                val = val // 10
-                if l1:
-                    l1 = l1.next
-                if l2:
-                    l2 = l2.next
-                tail = tail.next
+    def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
+        val = 0
+        dummy = ListNode()
+        tail = dummy
+        while l1 or l2:
+            if l1:
+                val += l1.val
+            if l2:
+                val += l2.val
+            tail.next = ListNode(val % 10)
+            val = val // 10
+            if l1:
+                l1 = l1.next
+            if l2:
+                l2 = l2.next
+            tail = tail.next
 
-            while val > 0:
-                tail.next = ListNode(val % 10)
-                val = val // 10
-                tail = tail.next
-            return dummy.next
+        while val > 0:
+            tail.next = ListNode(val % 10)
+            val = val // 10
+            tail = tail.next
+        return dummy.next
 
 
-def make_node(l: List[int]) -> ListNode:
+def make_node(n: List[int]) -> ListNode:
     dummy = ListNode()
     tail = dummy
-    for i in l:
+    for i in n:
         tail.next = ListNode(i)
         tail = tail.next
     return dummy.next
 
 
-def print_node(l: ListNode) -> None:
-    while l:
-        print(l.val, end='')
-        if l.next:
+def print_node(node: ListNode) -> None:
+    while node:
+        print(node.val, end='')
+        if node.next:
             print(' -> ', end='')
-        l = l.next
+        node = node.next
     print()
 
 
@@ -61,4 +62,3 @@ if __name__ == '__main__':
     s = Solution()
     r = s.addTwoNumbers(l1, l2)
     print_node(r)
-
