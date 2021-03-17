@@ -4,8 +4,7 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         cache = {}
-        max_len = 0
-        length = 0
+        max_len, length = 0, 0
         i = 0
         while i < len(s):
             c = s[i]
@@ -19,6 +18,7 @@ class Solution:
                 i = cache[c] + 1
                 cache = {}
 
+        max_len = max(max_len, length)
         return max_len
 
 

@@ -14,6 +14,7 @@ def solution():
         ('abcabcbb', 3),
         ('bbbbb', 1),
         ('pwwkew', 3),
+        (' ', 1),
     ],
 )
 def test_longest_substring_without_repeating_characters(solution, s, expected):
