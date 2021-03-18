@@ -53,10 +53,8 @@ def print_node(node: ListNode) -> None:
 
 
 if __name__ == '__main__':
-    i1 = [2, 4, 3]
-    i2 = [5, 6, 4]
-    l1 = make_node(i1)
-    l2 = make_node(i2)
+    i1, i2 = [2, 4, 3], [5, 6, 4]
+    l1, l2 = make_node(i1), make_node(i2)
     print_node(l1)
     print_node(l2)
     s = Solution()
