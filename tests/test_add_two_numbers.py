@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 import pytest
 
-from leetcode.add_two_numbers import make_node
-
 
 @pytest.fixture
 def solution():
@@ -17,6 +15,7 @@ def solution():
     ],
 )
 def test_add_two_numbers(solution, num1, num2, expected):
+    from leetcode.add_two_numbers import make_node
     n1 = make_node(num1)
     n2 = make_node(num2)
     node = solution.addTwoNumbers(n1, n2)
