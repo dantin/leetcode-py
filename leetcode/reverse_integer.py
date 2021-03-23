@@ -6,16 +6,15 @@ class Solution:
         if x < 0:
             x = -x
 
-        limit = 2 ** 31
-        n = 0
+        n, limit = 0, 2 ** 31
         while x > 0:
             n = n * 10
             n += x % 10
             x //= 10
         if is_neg:
-            return 0 if n > limit else -n
+            return -n if n <= limit else 0
         else:
-            return 0 if n >= limit else n
+            return n if n < limit else 0
 
 
 if __name__ == '__main__':
