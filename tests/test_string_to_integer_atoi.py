@@ -16,6 +16,8 @@ def solution():
         ('4193 with words', 4193),
         ('words and 987', 0),
         ('-91283472332', -2147483648),
+        ('', 0),
+        (' ', 0),
     ],
 )
 def test_zigzag_conversion(solution, x, expected):

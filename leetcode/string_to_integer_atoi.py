@@ -9,6 +9,8 @@ class Solution:
             else:
                 break
 
+        if start == len(s):
+            return n
         is_neg = True if s[start] == '-' else False
         if s[start] in ('+', '-'):
             start += 1
