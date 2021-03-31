@@ -22,3 +22,5 @@ def test_longest_common_prefix(solution, strs, expected):
     assert actual == expected
     actual = solution.longestCommonPrefix3(strs)
     assert actual == expected
+    actual = solution.longestCommonPrefix4(strs)
+    assert actual == expected
