@@ -25,3 +25,12 @@ def test_merge_two_sorted_lists(solution, lists, expected):
     head = solution.mergeKLists(x)
     actual = dump_list(head)
     assert actual == expected
+
+    x = []
+    for nums in lists:
+        head = make_list(nums)
+        x.append(head)
+
+    head = solution.mergeKLists2(x)
+    actual = dump_list(head)
+    assert actual == expected
