@@ -40,11 +40,3 @@ class Solution:
             left -= 1
             right += 1
         return left + 1, right - 1
-
-
-if __name__ == '__main__':
-    orig = 'badad'
-    s = Solution()
-    print(f' Input s = {orig}')
-    o = s.longestPalindrome(orig)
-    print(f' Output: {o}')

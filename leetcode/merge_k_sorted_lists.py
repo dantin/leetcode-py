@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from typing import List
 
-from leetcode.utils.singly_linked_list import ListNode, build, dump
+from leetcode.utils.singly_linked_list import ListNode
 
 
 class Solution:
@@ -51,16 +51,3 @@ class Solution:
             return merge_list(l1, l2)
         n = len(lists)
         return merge(lists, 0, n - 1)
-
-
-if __name__ == '__main__':
-    lists = [[1, 4, 5], [1, 3, 4], [2, 6]]
-    print(f' Input: lists = {lists}')
-    s = Solution()
-    x = []
-    for nums in lists:
-        head = build(nums)
-        x.append(head)
-    head = s.mergeKLists(x)
-    r = dump(head)
-    print(f' Output: {r}')

@@ -20,11 +20,3 @@ class Solution:
 
         max_len = max(max_len, length)
         return max_len
-
-
-if __name__ == '__main__':
-    src = "abcabcbb"
-    s = Solution()
-    print(f'Input s = {src}')
-    r = s.lengthOfLongestSubstring(src)
-    print(f'Output: {r}')

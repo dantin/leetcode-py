@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from typing import Tuple
 
-from leetcode.utils.singly_linked_list import build, dump, ListNode
+from leetcode.utils.singly_linked_list import ListNode
 
 
 class Solution:
@@ -34,13 +34,3 @@ class Solution:
             head = tail.next
 
         return dummy.next
-
-
-if __name__ == '__main__':
-    nums, k = [1, 2, 3, 4, 5], 2
-    print(f' Input: head = {nums}, k = {k}')
-    head = build(nums)
-    s = Solution()
-    x = s.reverseKGroup(head, k)
-    r = dump(x)
-    print(f' Output: {r}')

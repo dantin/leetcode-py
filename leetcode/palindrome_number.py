@@ -15,11 +15,3 @@ class Solution:
             return True
         else:
             return lhs == rhs // 10
-
-
-if __name__ == '__main__':
-    x = 121
-    print(f' Input: x = {x}')
-    s = Solution()
-    y = s.isPalindrome(x)
-    print(f' Output: {y}')

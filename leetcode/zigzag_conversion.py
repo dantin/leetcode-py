@@ -13,11 +13,3 @@ class Solution:
             i += flag
 
         return ''.join(res)
-
-
-if __name__ == '__main__':
-    orig, row = 'PAYPALISHIRING', 3
-    print(f' Input: s = "{orig}", numRows = {row}')
-    s = Solution()
-    o = s.convert(orig, row)
-    print(f' Output: "{o}"')

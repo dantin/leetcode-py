@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from leetcode.utils.singly_linked_list import ListNode, build, dump
+from leetcode.utils.singly_linked_list import ListNode
 
 
 class Solution:
@@ -16,14 +16,3 @@ class Solution:
 
         second.next = second.next.next
         return dummy.next
-
-
-if __name__ == '__main__':
-    head = [1, 2, 3, 4, 5]
-    n = 2
-    print(f' Input head = {head}, n = {n}')
-    head = build(head)
-    s = Solution()
-    node = s.removeNthFromEnd(head, n)
-    nums = dump(node)
-    print(f' Output: {nums}')

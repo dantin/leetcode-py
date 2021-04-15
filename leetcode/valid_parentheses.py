@@ -19,11 +19,3 @@ class Solution:
             else:
                 stack.append(ch)
         return not stack
-
-
-if __name__ == '__main__':
-    x = '()'
-    print(f' Input: s = "{x}"')
-    s = Solution()
-    r = s.isValid(x)
-    print(f' Output: {r}')

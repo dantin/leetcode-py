@@ -24,11 +24,3 @@ class Solution:
                     if matches(i, j):
                         dp[i][j] = dp[i - 1][j - 1]
         return dp[m][n]
-
-
-if __name__ == '__main__':
-    x, p = 'aa', 'a'
-    print(f' Input: s = "{x}", p = "{p}"')
-    s = Solution()
-    r = s.isMatch(x, p)
-    print(f' Output: {r}')

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from leetcode.utils.singly_linked_list import ListNode, build, dump
+from leetcode.utils.singly_linked_list import ListNode
 
 
 class Solution:
@@ -18,13 +18,3 @@ class Solution:
 
         tail.next = l1 if l1 else l2
         return dummy.next
-
-
-if __name__ == '__main__':
-    nums1, nums2 = [1, 2, 4], [1, 3, 4]
-    print(f' Input: l1 = {nums1}, l2 = {nums2}')
-    l1, l2 = build(nums1), build(nums2)
-    s = Solution()
-    x = s.mergeTwoLists(l1, l2)
-    res = dump(x)
-    print(f' Output: {res}')

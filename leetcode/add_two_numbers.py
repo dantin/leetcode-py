@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from leetcode.utils.singly_linked_list import ListNode, build, dump # noqa
+from leetcode.utils.singly_linked_list import ListNode
 
 
 class Solution:
@@ -26,19 +26,3 @@ class Solution:
             val = val // 10
             tail = tail.next
         return dummy.next
-
-
-def print_node(node: ListNode) -> None:
-    r = dump(node)
-    print(' -> '.join([str(n) for n in r]))
-
-
-if __name__ == '__main__':
-
-    i1, i2 = [2, 4, 3], [5, 6, 4]
-    l1, l2 = build(i1), build(i2)
-    print_node(l1)
-    print_node(l2)
-    s = Solution()
-    r = s.addTwoNumbers(l1, l2)
-    print_node(r)
