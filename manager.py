@@ -344,5 +344,18 @@ def reverse_nodes_in_k_group() -> None:
     print(f' Output: {r}')
 
 
+@cli.command()
+def remove_duplicates_from_sorted_array() -> None:
+    """26# Remove Duplicates from Sorted Array."""
+    from leetcode.remove_duplicates_from_sorted_array import Solution
+
+    nums = [1, 1, 2]
+    print(f' Input: nums = {nums}')
+    s = Solution()
+    n = s.removeDuplicates(nums)
+    r = nums[:n]
+    print(f' Output: {n}, nums = {r}')
+
+
 if __name__ == '__main__':
     cli()
