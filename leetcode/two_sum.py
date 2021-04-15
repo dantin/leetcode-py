@@ -30,12 +30,3 @@ class Solution:
             else:
                 return [vals[low][0], vals[high][0]]
         return []
-
-
-if __name__ == '__main__':
-    nums, target = [2, 7, 11, 15], 9
-
-    print(f'Given nums: {nums}, target = {target}')
-    solution = Solution()
-    pos = solution.twoSum(nums, target)
-    print(f' output: {pos}')

@@ -1,11 +1,7 @@
 # -*- coding: utf-8 -*-
-from typing import List, Tuple
+from typing import Tuple
 
-
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
+from leetcode.utils.singly_linked_list import ListNode
 
 
 class Solution:
@@ -38,30 +34,3 @@ class Solution:
             head = tail.next
 
         return dummy.next
-
-
-def make_list(nums: List[int]) -> ListNode:
-    dummy = ListNode()
-    tail = dummy
-    for n in nums:
-        tail.next = ListNode(val=n)
-        tail = tail.next
-    return dummy.next
-
-
-def dump_list(head: ListNode) -> List[int]:
-    res = []
-    while head:
-        res.append(head.val)
-        head = head.next
-    return res
-
-
-if __name__ == '__main__':
-    nums, k = [1, 2, 3, 4, 5], 2
-    print(f' Input: head = {nums}, k = {k}')
-    head = make_list(nums)
-    s = Solution()
-    x = s.reverseKGroup(head, k)
-    r = dump_list(x)
-    print(f' Output: {r}')

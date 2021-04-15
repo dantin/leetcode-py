@@ -32,11 +32,3 @@ class Solution:
 
         backtrace(0)
         return combinations
-
-
-if __name__ == '__main__':
-    digits = '23'
-    print(f' Input: digits = {digits}')
-    s = Solution()
-    r = s.letterCombinations(digits)
-    print(f' Output: {r}')

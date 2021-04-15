@@ -35,11 +35,3 @@ class Solution:
             return self.__find_kth(nums1[:], nums2[i2:], k - i2)
         else:
             return nums1[i1 - 1]
-
-
-if __name__ == '__main__':
-    nums1, nums2 = [1, 3], [2]
-    s = Solution()
-    print(f'Input s = {nums1}, nums2 = {nums2}')
-    r = s.findMedianSortedArrays(nums1, nums2)
-    print(f'Output: {r}')

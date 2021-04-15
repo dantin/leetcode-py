@@ -60,11 +60,3 @@ class Solution:
             else:
                 high = mid - 1
         return strs[0][:low]
-
-
-if __name__ == '__main__':
-    strs = ['flower', 'flow', 'flight']
-    print(f' Input: strs = {strs}')
-    s = Solution()
-    r = s.longestCommonPrefix4(strs)
-    print(f' Output: {r}')

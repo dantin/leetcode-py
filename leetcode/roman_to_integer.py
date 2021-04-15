@@ -15,11 +15,3 @@ class Solution:
                 n += _ROMAN_DIGITS[s[i:i + 1]]
                 i += 1
         return n
-
-
-if __name__ == '__main__':
-    x = 'III'
-    print(f' Input: s = {x}')
-    s = Solution()
-    r = s.romanToInt(x)
-    print(f' Output: {r}')

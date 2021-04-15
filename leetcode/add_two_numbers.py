@@ -1,12 +1,6 @@
 # -*- coding: utf-8 -*-
-from typing import List
 
-
-# Definition for singly-linked list.
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
+from leetcode.utils.singly_linked_list import ListNode
 
 
 class Solution:
@@ -32,31 +26,3 @@ class Solution:
             val = val // 10
             tail = tail.next
         return dummy.next
-
-
-def make_node(n: List[int]) -> ListNode:
-    dummy = ListNode()
-    tail = dummy
-    for i in n:
-        tail.next = ListNode(i)
-        tail = tail.next
-    return dummy.next
-
-
-def print_node(node: ListNode) -> None:
-    while node:
-        print(node.val, end='')
-        if node.next:
-            print(' -> ', end='')
-        node = node.next
-    print()
-
-
-if __name__ == '__main__':
-    i1, i2 = [2, 4, 3], [5, 6, 4]
-    l1, l2 = make_node(i1), make_node(i2)
-    print_node(l1)
-    print_node(l2)
-    s = Solution()
-    r = s.addTwoNumbers(l1, l2)
-    print_node(r)

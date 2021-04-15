@@ -24,11 +24,3 @@ class Solution:
                     ans.append([nums[first], nums[second], nums[third]])
 
         return ans
-
-
-if __name__ == '__main__':
-    nums = [-1, 0, 1, 2, -1, -4]
-    print(f' Input: nums = {nums}')
-    s = Solution()
-    r = s.threeSum(nums)
-    print(f' Output: {r}')

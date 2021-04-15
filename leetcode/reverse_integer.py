@@ -15,11 +15,3 @@ class Solution:
             return -n if n <= limit else 0
         else:
             return n if n < limit else 0
-
-
-if __name__ == '__main__':
-    x = 123
-    print(f' Input: x = {x}')
-    s = Solution()
-    y = s.reverse(x)
-    print(f' Output: {y}')

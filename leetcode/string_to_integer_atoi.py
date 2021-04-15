@@ -27,11 +27,3 @@ class Solution:
             return -n if n < limit else -limit
         else:
             return n if n < limit else limit - 1
-
-
-if __name__ == '__main__':
-    x = '42'
-    print(f' Input: s = {x}')
-    s = Solution()
-    y = s.myAtoi(x)
-    print(f' Output: {y}')

@@ -21,11 +21,3 @@ class Solution:
 
         backtrace([], 0, 0)
         return ans
-
-
-if __name__ == '__main__':
-    n = 3
-    print(f' Input: n = {n}')
-    s = Solution()
-    x = s.generateParenthesis(n)
-    print(f' Output: {x}')

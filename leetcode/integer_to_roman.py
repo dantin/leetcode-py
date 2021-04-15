@@ -14,11 +14,3 @@ class Solution:
             count, num = divmod(num, val)
             roman_digits.append(symbol * count)
         return ''.join(roman_digits)
-
-
-if __name__ == '__main__':
-    num = 3
-    print(f' Input: num = {num}')
-    s = Solution()
-    r = s.intToRoman(num)
-    print(f' Output: {r}')

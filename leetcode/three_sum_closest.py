@@ -33,12 +33,3 @@ class Solution:
                         j0 += 1
                     j = j0
         return best
-
-
-if __name__ == '__main__':
-    nums = [-1, 2, 1, -4]
-    target = 1
-    print(f' nums = {nums}, target = {target}')
-    s = Solution()
-    r = s.threeSumClosest(nums, target)
-    print(f' Output: {r}')

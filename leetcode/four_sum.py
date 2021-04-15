@@ -41,12 +41,3 @@ class Solution:
                         right -= 1
 
         return quadruplets
-
-
-if __name__ == '__main__':
-    nums = [1, 0, -1, 0, -2, 2]
-    target = 0
-    print(f' Input: nums = {nums}, target = {target}')
-    s = Solution()
-    r = s.fourSum(nums, target)
-    print(f' Output: {r}')
