@@ -17,8 +17,8 @@ def solution():
     ],
 )
 def test_remove_nth_node_from_end_of_list(solution, head, n, expected):
-    from leetcode.remove_nth_node_from_end_of_list import build_list, encode_list
-    orig = build_list(head)
+    from leetcode.utils.singly_linked_list import build, dump
+    orig = build(head)
     node = solution.removeNthFromEnd(orig, n)
-    actual = encode_list(node)
+    actual = dump(node)
     assert actual == expected

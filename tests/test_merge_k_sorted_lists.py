@@ -17,20 +17,20 @@ def solution():
     ],
 )
 def test_merge_two_sorted_lists(solution, lists, expected):
-    from leetcode.merge_k_sorted_lists import make_list, dump_list
+    from leetcode.utils.singly_linked_list import build, dump
     x = []
     for nums in lists:
-        head = make_list(nums)
+        head = build(nums)
         x.append(head)
     head = solution.mergeKLists(x)
-    actual = dump_list(head)
+    actual = dump(head)
     assert actual == expected
 
     x = []
     for nums in lists:
-        head = make_list(nums)
+        head = build(nums)
         x.append(head)
 
     head = solution.mergeKLists2(x)
-    actual = dump_list(head)
+    actual = dump(head)
     assert actual == expected

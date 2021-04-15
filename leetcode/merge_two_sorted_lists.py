@@ -1,11 +1,6 @@
 # -*- coding: utf-8 -*-
-from typing import List
 
-
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
+from leetcode.utils.singly_linked_list import ListNode, build, dump
 
 
 class Solution:
@@ -25,29 +20,11 @@ class Solution:
         return dummy.next
 
 
-def make_list(nums: List[int]) -> ListNode:
-    dummy = ListNode()
-    tail = dummy
-    for n in nums:
-        node = ListNode(val=n)
-        tail.next = node
-        tail = node
-    return dummy.next
-
-
-def dump_list(head: ListNode) -> List[int]:
-    res = []
-    while head:
-        res.append(head.val)
-        head = head.next
-    return res
-
-
 if __name__ == '__main__':
     nums1, nums2 = [1, 2, 4], [1, 3, 4]
     print(f' Input: l1 = {nums1}, l2 = {nums2}')
-    l1, l2 = make_list(nums1), make_list(nums2)
+    l1, l2 = build(nums1), build(nums2)
     s = Solution()
     x = s.mergeTwoLists(l1, l2)
-    res = dump_list(x)
+    res = dump(x)
     print(f' Output: {res}')

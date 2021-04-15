@@ -17,9 +17,9 @@ def solution():
     ],
 )
 def test_merge_two_sorted_lists(solution, nums1, nums2, expected):
-    from leetcode.merge_two_sorted_lists import make_list, dump_list
-    l1 = make_list(nums1)
-    l2 = make_list(nums2)
+    from leetcode.utils.singly_linked_list import build, dump
+    l1 = build(nums1)
+    l2 = build(nums2)
     x = solution.mergeTwoLists(l1, l2)
-    actual = dump_list(x)
+    actual = dump(x)
     assert actual == expected

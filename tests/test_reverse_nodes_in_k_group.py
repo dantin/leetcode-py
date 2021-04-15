@@ -18,8 +18,8 @@ def solution():
     ],
 )
 def test_reverse_nodes_in_k_group(solution, nums, k, expected):
-    from leetcode.reverse_nodes_in_k_group import make_list, dump_list
-    x = make_list(nums)
+    from leetcode.utils.singly_linked_list import build, dump
+    x = build(nums)
     head = solution.reverseKGroup(x, k)
-    actual = dump_list(head)
+    actual = dump(head)
     assert actual == expected

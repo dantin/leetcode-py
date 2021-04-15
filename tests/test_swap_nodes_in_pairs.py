@@ -17,8 +17,8 @@ def solution():
     ],
 )
 def test_swap_nodes_in_pairs(solution, nums, expected):
-    from leetcode.swap_nodes_in_pairs import make_list, dump_list
-    head = make_list(nums)
+    from leetcode.utils.singly_linked_list import build, dump
+    head = build(nums)
     x = solution.swapPairs(head)
-    actual = dump_list(x)
+    actual = dump(x)
     assert actual == expected
