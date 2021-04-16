@@ -357,5 +357,18 @@ def remove_duplicates_from_sorted_array() -> None:
     print(f' Output: {n}, nums = {r}')
 
 
+@cli.command()
+def remove_element() -> None:
+    """27# Remove Element."""
+    from leetcode.remove_element import Solution
+
+    nums, val = [3, 2, 2, 3], 3
+    print(f' Input: nums = {nums}, val = {val}')
+    s = Solution()
+    x = s.removeElement(nums, val)
+    r = nums[:x]
+    print(f' Output: {r}')
+
+
 if __name__ == '__main__':
     cli()
