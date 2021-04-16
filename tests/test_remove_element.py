@@ -12,7 +12,7 @@ def solution():
     'nums,val,expected',
     [
         ([3, 2, 2, 3], 2, [3, 3]),
-        ([0, 1, 2, 2, 3, 0, 4, 2], 2, [0, 1, 3, 0, 4]),
+        ([0, 1, 2, 2, 3, 0, 4, 2], 2, [0, 1, 4, 0, 3]),
     ],
 )
 def test_remove_element(solution, nums, val, expected):
