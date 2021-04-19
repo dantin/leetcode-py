@@ -370,5 +370,17 @@ def remove_element() -> None:
     print(f' Output: {r}')
 
 
+@cli.command()
+def implement_strstr() -> None:
+    """28# Implement strStr()."""
+    from leetcode.implement_strstr import Solution
+
+    haystack, needle = 'hello', 'll'
+    print(f' haystack = {haystack}, needle = {needle}')
+    s = Solution()
+    r = s.strStr(haystack, needle)
+    print(f' Output {r}')
+
+
 if __name__ == '__main__':
     cli()
