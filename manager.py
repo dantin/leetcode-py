@@ -376,10 +376,22 @@ def implement_strstr() -> None:
     from leetcode.implement_strstr import Solution
 
     haystack, needle = 'hello', 'll'
-    print(f' haystack = {haystack}, needle = {needle}')
+    print(f' Input: haystack = {haystack}, needle = {needle}')
     s = Solution()
     r = s.strStr(haystack, needle)
-    print(f' Output {r}')
+    print(f' Output: {r}')
+
+
+@cli.command()
+def divide_two_integers() -> None:
+    """29# Divide Two Integers."""
+    from leetcode.divide_two_integers import Solution
+
+    dividend, divisor = 10, 3
+    print(f' Input: dividend = {dividend}, divisor = {divisor}')
+    s = Solution()
+    x = s.divide(dividend, divisor)
+    print(f' Output: {x}')
 
 
 if __name__ == '__main__':
