@@ -406,5 +406,17 @@ def substring_with_concatenation_of_all_words() -> None:
     print(f' Output: {r}')
 
 
+@cli.command()
+def next_permutation() -> None:
+    """31# Next Permutation."""
+    from leetcode.next_permutation import Solution
+
+    nums = [1, 2, 3]
+    print(f' Input: nums = {nums}')
+    s = Solution()
+    s.nextPermutation(nums)
+    print(f' Output: {nums}')
+
+
 if __name__ == '__main__':
     cli()
