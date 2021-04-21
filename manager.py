@@ -394,5 +394,17 @@ def divide_two_integers() -> None:
     print(f' Output: {x}')
 
 
+@cli.command()
+def substring_with_concatenation_of_all_words() -> None:
+    """30# Substring with Concatenation of All Words."""
+    from leetcode.substring_with_concatenation_of_all_words import Solution
+
+    x, words = 'barfoothefoobarman', ['foo', 'bar']
+    print(f' Input: s = "{x}", words = {words}')
+    s = Solution()
+    r = s.findSubstring(x, words)
+    print(f' Output: {r}')
+
+
 if __name__ == '__main__':
     cli()
