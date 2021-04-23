@@ -430,5 +430,17 @@ def longest_valid_parentheses() -> None:
     print(f' Output: {r}')
 
 
+@cli.command()
+def search_in_rotated_sorted_array() -> None:
+    """33# Search in Rotated Sorted Array."""
+    from leetcode.search_in_rotated_sorted_array import Solution
+
+    nums, target = [4, 5, 6, 7, 0, 1, 2], 0
+    print(f' Input: nums = {nums}, target = {target}')
+    s = Solution()
+    x = s.search(nums, target)
+    print(f' Output: {x}')
+
+
 if __name__ == '__main__':
     cli()
