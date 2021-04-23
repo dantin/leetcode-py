@@ -418,5 +418,17 @@ def next_permutation() -> None:
     print(f' Output: {nums}')
 
 
+@cli.command()
+def longest_valid_parentheses() -> None:
+    """32# Longest Valid Parentheses."""
+    from leetcode.longest_valid_parentheses import Solution
+
+    x = '(()'
+    print(f' Input: s = "{x}"')
+    s = Solution()
+    r = s.longestValidParentheses(x)
+    print(f' Output: {r}')
+
+
 if __name__ == '__main__':
     cli()
