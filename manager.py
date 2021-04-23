@@ -406,5 +406,29 @@ def substring_with_concatenation_of_all_words() -> None:
     print(f' Output: {r}')
 
 
+@cli.command()
+def next_permutation() -> None:
+    """31# Next Permutation."""
+    from leetcode.next_permutation import Solution
+
+    nums = [1, 2, 3]
+    print(f' Input: nums = {nums}')
+    s = Solution()
+    s.nextPermutation(nums)
+    print(f' Output: {nums}')
+
+
+@cli.command()
+def longest_valid_parentheses() -> None:
+    """32# Longest Valid Parentheses."""
+    from leetcode.longest_valid_parentheses import Solution
+
+    x = '(()'
+    print(f' Input: s = "{x}"')
+    s = Solution()
+    r = s.longestValidParentheses(x)
+    print(f' Output: {r}')
+
+
 if __name__ == '__main__':
     cli()
