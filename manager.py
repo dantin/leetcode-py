@@ -442,5 +442,17 @@ def search_in_rotated_sorted_array() -> None:
     print(f' Output: {x}')
 
 
+@cli.command()
+def find_first_and_last_position_of_element_in_sorted_array() -> None:
+    """34# Find First and Last Position of Element in Sorted Array."""
+    from leetcode.find_first_and_last_position_of_element_in_sorted_array import Solution
+
+    nums, target = [5, 7, 7, 8, 8, 10], 8
+    print(f' Input: nums = {nums}, target = {target}')
+    s = Solution()
+    x = s.searchRange(nums, target)
+    print(f' Output: {x}')
+
+
 if __name__ == '__main__':
     cli()
