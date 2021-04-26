@@ -454,5 +454,17 @@ def find_first_and_last_position_of_element_in_sorted_array() -> None:
     print(f' Output: {x}')
 
 
+@cli.command()
+def search_insert_position() -> None:
+    """35# Search Insert Position."""
+    from leetcode.search_insert_position import Solution
+
+    nums, target = [1, 3, 5, 6], 5
+    print(f' Input: nums = {nums}, target = {target}')
+    s = Solution()
+    x = s.searchInsert(nums, target)
+    print(f' Output: {x}')
+
+
 if __name__ == '__main__':
     cli()
