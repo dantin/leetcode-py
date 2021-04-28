@@ -5,10 +5,11 @@ from typing import List
 class Solution:
     def solveSudoku(self, board: List[List[str]]) -> None:
         def dfs(pos: int) -> None:
-            nonlocal valid
+            nonlocal done
             if pos == len(spaces):
-                valid = True
+                done = True
                 return
+
             i, j = spaces[pos]
             for digit in range(9):
                 if ((not lines[i][digit]) and
@@ -18,13 +19,13 @@ class Solution:
                     board[i][j] = str(digit + 1)
                     dfs(pos + 1)
                     lines[i][digit] = columns[j][digit] = boxes[i // 3][j // 3][digit] = False
-                if valid:
+                if done:
                     return
 
         lines = [[False] * 9 for _ in range(9)]
         columns = [[False] * 9 for _ in range(9)]
         boxes = [[[False] * 9 for _i in range(3)] for _j in range(3)]
-        valid = False
+        done = False
         spaces = []
 
         for i in range(9):
