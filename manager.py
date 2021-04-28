@@ -487,5 +487,27 @@ def valid_sudoku() -> None:
     print(f' Output: {x}')
 
 
+@cli.command()
+def sudoku_solver() -> None:
+    """37# Sudoku Solver."""
+    from leetcode.sudoku_solver import Solution
+
+    board = [['5', '3', '.', '.', '7', '.', '.', '.', '.'],
+             ['6', '.', '.', '1', '9', '5', '.', '.', '.'],
+             ['.', '9', '8', '.', '.', '.', '.', '6', '.'],
+             ['8', '.', '.', '.', '6', '.', '.', '.', '3'],
+             ['4', '.', '.', '8', '.', '3', '.', '.', '1'],
+             ['7', '.', '.', '.', '2', '.', '.', '.', '6'],
+             ['.', '6', '.', '.', '.', '.', '2', '8', '.'],
+             ['.', '.', '.', '4', '1', '9', '.', '.', '5'],
+             ['.', '.', '.', '.', '8', '.', '.', '7', '9']]
+    line = '\n,'.join([f'{row}' for row in board])
+    print(f' Input: board = \n[{line}]')
+    s = Solution()
+    s.solveSudoku(board)
+    line = '\n,'.join([f'{row}' for row in board])
+    print(f' Output:\n[{line}]')
+
+
 if __name__ == '__main__':
     cli()
