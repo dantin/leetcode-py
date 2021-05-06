@@ -509,5 +509,17 @@ def sudoku_solver() -> None:
     print(f' Output:\n[{line}]')
 
 
+@cli.command()
+def count_and_say() -> None:
+    """38# Count and Say."""
+    from leetcode.count_and_say import Solution
+
+    n = 4
+    print(f' Input: n = {n}')
+    s = Solution()
+    x = s.countAndSay(n)
+    print(f' Output: {x}')
+
+
 if __name__ == '__main__':
     cli()
