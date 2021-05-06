@@ -521,5 +521,17 @@ def count_and_say() -> None:
     print(f' Output: {x}')
 
 
+@cli.command()
+def combination_sum() -> None:
+    """39# Combination Sum."""
+    from leetcode.combination_sum import Solution
+
+    candidates, target = [2, 3, 6, 7], 7
+    print(f' Input: candidates = {candidates}, target = {target}')
+    s = Solution()
+    x = s.combinationSum(candidates, target)
+    print(f' Output: {x}')
+
+
 if __name__ == '__main__':
     cli()
