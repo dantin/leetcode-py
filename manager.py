@@ -533,5 +533,17 @@ def combination_sum() -> None:
     print(f' Output: {x}')
 
 
+@cli.command()
+def combination_sum_ii() -> None:
+    """40# Combination Sum II."""
+    from leetcode.combination_sum_ii import Solution
+
+    candidates, target = [10, 1, 2, 7, 6, 1, 5], 8
+    print(f' Input: candidates = {candidates}, target = {target}')
+    s = Solution()
+    x = s.combinationSum2(candidates, target)
+    print(f' Output: {x}')
+
+
 if __name__ == '__main__':
     cli()
