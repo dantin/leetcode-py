@@ -545,5 +545,17 @@ def combination_sum_ii() -> None:
     print(f' Output: {x}')
 
 
+@cli.command()
+def first_missing_positive() -> None:
+    """41# First Missing Positive."""
+    from leetcode.first_missing_positive import Solution
+
+    nums = [1, 2, 0]
+    print(f' Input: nums = {nums}')
+    s = Solution()
+    x = s.firstMissingPositive(nums)
+    print(f' Output: {x}')
+
+
 if __name__ == '__main__':
     cli()
