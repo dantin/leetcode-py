@@ -557,5 +557,17 @@ def first_missing_positive() -> None:
     print(f' Output: {x}')
 
 
+@cli.command()
+def trapping_rain_water() -> None:
+    """42# Trapping Rain Water."""
+    from leetcode.trapping_rain_water import Solution
+
+    height = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]
+    print(f' Input: height = {height}')
+    s = Solution()
+    x = s.trap(height)
+    print(f' Output: {x}')
+
+
 if __name__ == '__main__':
     cli()
