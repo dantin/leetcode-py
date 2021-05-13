@@ -569,5 +569,17 @@ def trapping_rain_water() -> None:
     print(f' Output: {x}')
 
 
+@cli.command()
+def multiply_strings() -> None:
+    """43# Multiply Strings."""
+    from leetcode.multiply_strings import Solution
+
+    num1, num2 = '2', '3'
+    print(f' Input: num1 = "{num1}, num2 = "{num2}"')
+    s = Solution()
+    x = s.multiply(num1, num2)
+    print(f' Output: {x}')
+
+
 if __name__ == '__main__':
     cli()
