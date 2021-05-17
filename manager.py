@@ -581,5 +581,17 @@ def multiply_strings() -> None:
     print(f' Output: {x}')
 
 
+@cli.command()
+def wildcard_matching() -> None:
+    """44# Wildcard Matching."""
+    from leetcode.wildcard_matching import Solution
+
+    s, p = 'aa', 'a'
+    print(f' Input: s = {s}, p = {p}')
+    x = Solution()
+    r = x.isMatch(s, p)
+    print(f' Output: {r}')
+
+
 if __name__ == '__main__':
     cli()
