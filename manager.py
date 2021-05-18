@@ -593,5 +593,17 @@ def wildcard_matching() -> None:
     print(f' Output: {r}')
 
 
+@cli.command()
+def jump_game_ii() -> None:
+    """45# Jump Game II."""
+    from leetcode.jump_game_ii import Solution
+
+    nums = [2, 3, 1, 1, 4]
+    print(f' Input: nums = {nums}')
+    s = Solution()
+    x = s.jump(nums)
+    print(f' Output: {x}')
+
+
 if __name__ == '__main__':
     cli()
