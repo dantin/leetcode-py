@@ -605,5 +605,17 @@ def jump_game_ii() -> None:
     print(f' Output: {x}')
 
 
+@cli.command()
+def permutations() -> None:
+    """46# Permutations."""
+    from leetcode.permutations import Solution
+
+    nums = [1, 2, 3]
+    print(f' Input: nums = {nums}')
+    s = Solution()
+    x = s.permute(nums)
+    print(f' Output: {x}')
+
+
 if __name__ == '__main__':
     cli()
