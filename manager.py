@@ -617,5 +617,17 @@ def permutations() -> None:
     print(f' Output: {x}')
 
 
+@cli.command()
+def permutations_ii() -> None:
+    """47# Permutations II."""
+    from leetcode.permutations_ii import Solution
+
+    nums = [1, 2, 3]
+    print(f' Input: nums = {nums}')
+    s = Solution()
+    x = s.permuteUnique(nums)
+    print(f' Output: {x}')
+
+
 if __name__ == '__main__':
     cli()
