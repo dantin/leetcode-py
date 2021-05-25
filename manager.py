@@ -629,5 +629,17 @@ def permutations_ii() -> None:
     print(f' Output: {x}')
 
 
+@cli.command()
+def rotate_image() -> None:
+    """48# Rotate Image."""
+    from leetcode.rotate_image import Solution
+
+    matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    print(f' Input: matrix = {matrix}')
+    s = Solution()
+    s.rotate(matrix)
+    print(f' Output: {matrix}')
+
+
 if __name__ == '__main__':
     cli()
