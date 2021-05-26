@@ -641,5 +641,17 @@ def rotate_image() -> None:
     print(f' Output: {matrix}')
 
 
+@cli.command()
+def group_anagrams() -> None:
+    """49. Group Anagrams."""
+    from leetcode.group_anagrams import Solution
+
+    strs = ['eat', 'tea', 'tan', 'ate', 'nat', 'bat']
+    print(f' Input: strs = {strs}')
+    s = Solution()
+    x = s.groupAnagrams(strs)
+    print(f' Output: {x}')
+
+
 if __name__ == '__main__':
     cli()
