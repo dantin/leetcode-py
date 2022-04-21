@@ -6,11 +6,13 @@ class Solution:
             return True
         if x < 0 or x % 10 == 0:
             return False
+
+        # split x into two parts, lhs and rhs.
         lhs, rhs = x, 0
         while lhs > rhs:
             hi, lo = lhs // 10, lhs % 10
             lhs, rhs = hi, rhs * 10 + lo
-        print(lhs, rhs)
+
         if lhs == rhs:
             return True
         else:
