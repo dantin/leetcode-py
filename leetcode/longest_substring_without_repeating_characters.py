@@ -14,8 +14,9 @@ class Solution:
                 i += 1
             else:
                 max_len = max(max_len, length)
-                length = 0
                 i = cache[c] + 1
+                # reset state.
+                length = 0
                 cache = {}
 
         max_len = max(max_len, length)
