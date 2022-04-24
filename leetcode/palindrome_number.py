@@ -2,6 +2,8 @@
 
 class Solution:
     def isPalindrome(self, x: int) -> bool:
+        # n = str(x)
+        # return n == n[::-1]
         if x == 0:
             return True
         if x < 0 or x % 10 == 0:
