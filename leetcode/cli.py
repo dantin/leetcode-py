@@ -643,7 +643,7 @@ def rotate_image() -> None:
 
 @cli.command()
 def group_anagrams() -> None:
-    """49. Group Anagrams."""
+    """49# Group Anagrams."""
     from leetcode.group_anagrams import Solution
 
     strs = ['eat', 'tea', 'tan', 'ate', 'nat', 'bat']
@@ -651,3 +651,15 @@ def group_anagrams() -> None:
     s = Solution()
     x = s.groupAnagrams(strs)
     print(f' Output: {x}')
+
+
+@cli.command()
+def powx_n() -> None:
+    """50# Pow(x, n)."""
+    from leetcode.powx_n import Solution
+
+    x, n = 2.0, 10
+    print(f' Input: x = {x}, n = {n}')
+    s = Solution()
+    ans = s.myPow(x, n)
+    print(f' Output: {ans}')
