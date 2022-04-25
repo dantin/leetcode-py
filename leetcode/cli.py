@@ -663,3 +663,14 @@ def powx_n() -> None:
     s = Solution()
     ans = s.myPow(x, n)
     print(f' Output: {ans}')
+
+
+@cli.command()
+def binary_gap() -> None:
+    from leetcode.binary_gap import Solution
+
+    n = 22
+    print(f' Input: n = {n}')
+    s = Solution()
+    x = s.binaryGap(n)
+    print(f' Output: {x}')
