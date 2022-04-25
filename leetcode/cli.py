@@ -666,6 +666,18 @@ def powx_n() -> None:
 
 
 @cli.command()
+def random_pick_index() -> None:
+    """398# Random Pick Index."""
+    from leetcode.random_pick_index import Solution
+
+    nums = [1, 2, 3, 3, 3]
+    print(f' Input: nums = {nums}')
+    s = Solution(nums)
+    x = s.pick(1)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def binary_gap() -> None:
     """868# Binary Gap."""
     from leetcode.binary_gap import Solution
