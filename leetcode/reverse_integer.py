@@ -9,6 +9,8 @@ class Solution:
         n = 0
         while x > 0:
             n = n * 10
+            # x, m = divmod(x, 10)
+            # n += m
             n += x % 10
             x //= 10
 

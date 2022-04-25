@@ -12,5 +12,7 @@ class Solution:
             if num == 0:
                 break
             count, num = divmod(num, val)
+            # count = num // val
+            # num = num % val
             roman_digits.append(symbol * count)
         return ''.join(roman_digits)

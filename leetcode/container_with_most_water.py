@@ -9,8 +9,10 @@ class Solution:
         while lhs < rhs:
             area = min(height[lhs], height[rhs]) * (rhs - lhs)
             max_area = max(area, max_area)
+
             if height[lhs] <= height[rhs]:
                 lhs += 1
             else:
                 rhs -= 1
+
         return max_area

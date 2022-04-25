@@ -6,11 +6,11 @@ class Solution:
             return s
 
         rows = [''] * numRows
-        i, flag = 0, -1
+        i, step = 0, -1
         for c in s:
             rows[i] += c
             if i == 0 or i == numRows - 1:
-                flag = -flag
-            i += flag
+                step = -step
+            i += step
 
         return ''.join(rows)
