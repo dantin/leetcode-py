@@ -667,6 +667,7 @@ def powx_n() -> None:
 
 @cli.command()
 def binary_gap() -> None:
+    """868# Binary Gap."""
     from leetcode.binary_gap import Solution
 
     n = 22
