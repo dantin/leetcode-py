@@ -687,3 +687,15 @@ def binary_gap() -> None:
     s = Solution()
     x = s.binaryGap(n)
     print(f' Output: {x}')
+
+
+@cli.command()
+def projection_area_of_3d_shapes() -> None:
+    """883# Projection Area of 3D-Shapes."""
+    from leetcode.projection_area_of_3d_shapes import Solution
+
+    grid = [[1, 2], [3, 4]]
+    print(f' Input: {grid}')
+    s = Solution()
+    x = s.projectionArea(grid)
+    print(f' Output: {x}')
