@@ -666,6 +666,18 @@ def powx_n() -> None:
 
 
 @cli.command()
+def n_queens() -> None:
+    """51# N Queens."""
+    from leetcode.n_queens import Solution
+
+    n = 4
+    print(f' Input: n = {n}')
+    s = Solution()
+    x = s.solveNQueens(n)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def random_pick_index() -> None:
     """398# Random Pick Index."""
     from leetcode.random_pick_index import Solution
