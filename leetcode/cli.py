@@ -690,6 +690,23 @@ def random_pick_index() -> None:
 
 
 @cli.command()
+def pacific_atlantic_water_flow() -> None:
+    """417# Pacific Atlantic Water Flow."""
+    from leetcode.pacific_atlantic_water_flow import Solution
+
+    heights = [
+        [1, 2, 2, 3, 5],
+        [3, 2, 3, 4, 4],
+        [2, 4, 5, 3, 1],
+        [6, 7, 1, 4, 5],
+        [5, 1, 1, 2, 4]]
+    print(f' Input: heights = {heights}')
+    s = Solution()
+    x = s.pacificAtlantic(heights)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def binary_gap() -> None:
     """868# Binary Gap."""
     from leetcode.binary_gap import Solution
