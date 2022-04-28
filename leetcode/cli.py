@@ -728,3 +728,15 @@ def projection_area_of_3d_shapes() -> None:
     s = Solution()
     x = s.projectionArea(grid)
     print(f' Output: {x}')
+
+
+@cli.command()
+def sort_array_by_parity() -> None:
+    """905# Sort Array by Parity."""
+    from leetcode.sort_array_by_parity import Solution
+
+    nums = [3, 1, 2, 4]
+    print(f' Input: nums = {nums}')
+    s = Solution()
+    x = s.sortArrayByParity(nums)
+    print(f' Output: {x}')
