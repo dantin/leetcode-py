@@ -707,6 +707,20 @@ def pacific_atlantic_water_flow() -> None:
 
 
 @cli.command()
+def construct_quad_tree() -> None:
+    """427: Construct Quad Tree."""
+    from leetcode.construct_quad_tree import Solution
+    from leetcode.utils.quad_tree import dump
+
+    grid = [[0, 1], [1, 0]]
+    print(f' Input: grid = {grid}')
+    s = Solution()
+    x = s.construct(grid)
+    out = dump(x)
+    print(f' Output: {out}')
+
+
+@cli.command()
 def binary_gap() -> None:
     """868# Binary Gap."""
     from leetcode.binary_gap import Solution
@@ -739,4 +753,16 @@ def sort_array_by_parity() -> None:
     print(f' Input: nums = {nums}')
     s = Solution()
     x = s.sortArrayByParity(nums)
+    print(f' Output: {x}')
+
+
+@cli.command()
+def smallest_range_i() -> None:
+    """908# Smallest Range I."""
+    from leetcode.smallest_range_i import Solution
+
+    nums, k = [1], 0
+    print(f' Input: nums = {nums}, k = {k}')
+    s = Solution()
+    x = s.smallestRangeI(nums, k)
     print(f' Output: {x}')
