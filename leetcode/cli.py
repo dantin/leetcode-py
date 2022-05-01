@@ -766,3 +766,18 @@ def smallest_range_i() -> None:
     s = Solution()
     x = s.smallestRangeI(nums, k)
     print(f' Output: {x}')
+
+
+@cli.command()
+def all_elements_in_two_binary_search_trees() -> None:
+    """1305# All Emements in Two Binary Search Trees."""
+    from leetcode.all_elements_in_two_binary_search_trees import Solution
+    from leetcode.utils.binary_search_tree import make_tree
+
+    nums1, nums2 = [2, 1, 4], [1, 0, 3]
+    print(f' Input: root1 = {nums1}, root2 = {nums2}')
+    root1 = make_tree(nums1, 0)
+    root2 = make_tree(nums2, 0)
+    s = Solution()
+    x = s.getAllElements(root1, root2)
+    print(f' Output: {x}')
