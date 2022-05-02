@@ -721,6 +721,18 @@ def construct_quad_tree() -> None:
 
 
 @cli.command()
+def tag_validator() -> None:
+    """591# Tag Validator."""
+    from leetcode.tag_validator import Solution
+
+    code = '<DIV>This is the first line <![CDATA[<div>]]></DIV>'
+    print(f' Input: "{code}"')
+    s = Solution()
+    x = s.isValid(code)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def binary_gap() -> None:
     """868# Binary Gap."""
     from leetcode.binary_gap import Solution
