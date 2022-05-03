@@ -781,6 +781,18 @@ def smallest_range_i() -> None:
 
 
 @cli.command()
+def reorder_data_in_log_files() -> None:
+    """937# Reorder Data in Log Files."""
+    from leetcode.reorder_data_in_log_files import Solution
+
+    logs = ['dig1 8 1 5 1', 'let1 art can', 'dig2 3 6', 'let2 own kit dig', 'let3 art zero']
+    print(f' Input: {logs}')
+    s = Solution()
+    x = s.reorderLogFiles(logs)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def all_elements_in_two_binary_search_trees() -> None:
     """1305# All Emements in Two Binary Search Trees."""
     from leetcode.all_elements_in_two_binary_search_trees import Solution
