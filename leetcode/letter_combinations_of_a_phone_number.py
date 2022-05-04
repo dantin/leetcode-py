@@ -18,17 +18,17 @@ class Solution:
             '8': 'tuv',
             '9': 'wxyz',
         }
-        combination = []
+        cache = []
 
         def backtrace(idx: int):
             if idx == len(digits):
-                combinations.append(''.join(combination))
+                combinations.append(''.join(cache))
             else:
                 digit = digits[idx]
                 for letter in phone_map[digit]:
-                    combination.append(letter)
+                    cache.append(letter)
                     backtrace(idx + 1)
-                    combination.pop()
+                    cache.pop()
 
         backtrace(0)
         return combinations

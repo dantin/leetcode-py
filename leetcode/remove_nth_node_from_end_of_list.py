@@ -5,14 +5,14 @@ from leetcode.utils.singly_linked_list import ListNode
 class Solution:
     def removeNthFromEnd(self, head: ListNode, n: int) -> ListNode:
         dummy = ListNode(0, head)
-        first, second = head, dummy
+        fast, slow = head, dummy
 
         for i in range(n):
-            first = first.next
+            fast = fast.next
 
-        while first:
-            first = first.next
-            second = second.next
+        while fast:
+            fast = fast.next
+            slow = slow.next
 
-        second.next = second.next.next
+        slow.next = slow.next.next
         return dummy.next
