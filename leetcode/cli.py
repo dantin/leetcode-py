@@ -805,3 +805,15 @@ def all_elements_in_two_binary_search_trees() -> None:
     s = Solution()
     x = s.getAllElements(root1, root2)
     print(f' Output: {x}')
+
+
+@cli.command()
+def find_the_winner_of_the_circular_game() -> None:
+    """1823# Find the Winner of the Circular Game."""
+    from leetcode.find_the_winner_of_the_circular_game import Solution
+
+    n, k = 5, 2
+    print(f' Input: n = {n}, k = {k}')
+    s = Solution()
+    x = s.findTheWinner(n, k)
+    print(f' Output: {x}')
