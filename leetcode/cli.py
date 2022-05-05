@@ -733,6 +733,18 @@ def tag_validator() -> None:
 
 
 @cli.command()
+def subarray_product_less_than_k() -> None:
+    """713# Subarray Product Less Than K."""
+    from leetcode.subarray_product_less_than_k import Solution
+
+    nums, k = [10, 5, 2, 6], 100
+    print(f' Input: nums = {nums}, k = {k}')
+    s = Solution()
+    x = s.numSubarrayProductLessThanK(nums, k)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def binary_gap() -> None:
     """868# Binary Gap."""
     from leetcode.binary_gap import Solution
