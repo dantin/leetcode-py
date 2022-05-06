@@ -793,6 +793,23 @@ def smallest_range_i() -> None:
 
 
 @cli.command()
+def number_of_recent_calls() -> None:
+    """933# Number of Recent Calls."""
+    from leetcode.number_of_recent_calls import RecentCounter
+
+    commands = ['RecentCounter'] + ['ping'] * 4
+    params = [[], [1], [100], [3001], [3002]]
+    print(f' Input:\n {commands}\n {params}')
+    counter = RecentCounter()
+    output = [None]
+    for cmd, args in zip(commands, params):
+        if cmd == 'ping':
+            x = counter.ping(args[0])
+            output.append(x)
+    print(f' Output:\n {output}')
+
+
+@cli.command()
 def reorder_data_in_log_files() -> None:
     """937# Reorder Data in Log Files."""
     from leetcode.reorder_data_in_log_files import Solution
