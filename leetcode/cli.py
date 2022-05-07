@@ -721,6 +721,20 @@ def construct_quad_tree() -> None:
 
 
 @cli.command()
+def minimum_genetic_mutation() -> None:
+    """433# Minimum Genetic Mutation."""
+    from leetcode.minimum_genetic_mutation import Solution
+
+    start = 'AACCGGTT'
+    end = 'AACCGGTA'
+    bank = ['AACCGGTA']
+    print(f' Input: start = {start}, end = {end}, bank = {bank}')
+    s = Solution()
+    x = s.minMutation(start, end, bank)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def tag_validator() -> None:
     """591# Tag Validator."""
     from leetcode.tag_validator import Solution
