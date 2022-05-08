@@ -735,6 +735,18 @@ def minimum_genetic_mutation() -> None:
 
 
 @cli.command()
+def find_all_duplicates_in_an_array() -> None:
+    """442# Find All Duplicates in An Array."""
+    from leetcode.find_all_duplicates_in_an_array import Solution
+
+    nums = [4, 3, 2, 7, 8, 2, 3, 1]
+    print(f' Input: nums = {nums}')
+    s = Solution()
+    x = s.findDupicates(nums)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def tag_validator() -> None:
     """591# Tag Validator."""
     from leetcode.tag_validator import Solution
