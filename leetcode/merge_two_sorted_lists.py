@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
+from typing import Optional
 
 from leetcode.utils.singly_linked_list import ListNode
 
 
 class Solution:
-    def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
+    def mergeTwoLists(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
         dummy = ListNode()
         tail = dummy
         while l1 and l2:

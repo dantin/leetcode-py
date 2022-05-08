@@ -4,20 +4,20 @@ from typing import List
 
 class Solution:
     def generateParenthesis(self, n: int) -> List[str]:
-        ans = []
+        cache = []
 
-        def backtrace(s, left, right):
-            if len(s) == 2 * n:
-                ans.append(''.join(s))
+        def backtrace(buffer, left, right):
+            if len(buffer) == 2 * n:
+                cache.append(''.join(buffer))
                 return
             if left < n:
-                s.append('(')
-                backtrace(s, left + 1, right)
-                s.pop()
+                buffer.append('(')
+                backtrace(buffer, left + 1, right)
+                buffer.pop()
             if right < left:
-                s.append(')')
-                backtrace(s, left, right + 1)
-                s.pop()
+                buffer.append(')')
+                backtrace(buffer, left, right + 1)
+                buffer.pop()
 
         backtrace([], 0, 0)
-        return ans
+        return cache
