@@ -848,6 +848,18 @@ def reorder_data_in_log_files() -> None:
 
 
 @cli.command()
+def di_string_match() -> None:
+    """942# DI String Match."""
+    from leetcode.di_string_match import Solution
+
+    s = 'IDID'
+    print(f' Input: s = {s}')
+    solution = Solution()
+    x = solution.diStringMatch(s)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def all_elements_in_two_binary_search_trees() -> None:
     """1305# All Emements in Two Binary Search Trees."""
     from leetcode.all_elements_in_two_binary_search_trees import Solution
