@@ -8,17 +8,6 @@ _DIRS = (0, 1), (1, 0), (0, -1), (-1, 0)
 
 class Solution:
     def canMouseWin(self, grid: List[str], catJump: int, mouseJump: int) -> bool:
-        rows, cols = len(grid), len(grid[0])
-        for x in range(rows):
-            for y in range(cols):
-                if grid[x][y] == 'C':
-                    cat = x, y
-                elif grid[x][y] == 'F':
-                    food = x, y
-                elif grid[x][y] == 'M':
-                    mouse = x, y
-        print(f'{cat}, {mouse}, {food}')
-
         @lru_cache(None)
         def dfs(mouse, cat, i):
             if mouse == cat or cat == food or i > 128:
@@ -43,5 +32,16 @@ class Solution:
                     elif is_cat and not dfs(mouse, (nx, ny), i + 1):
                         return False
             return is_cat
+
+        rows, cols = len(grid), len(grid[0])
+        for x in range(rows):
+            for y in range(cols):
+                if grid[x][y] == 'C':
+                    cat = x, y
+                elif grid[x][y] == 'F':
+                    food = x, y
+                elif grid[x][y] == 'M':
+                    mouse = x, y
+        print(f'{cat}, {mouse}, {food}')
 
         return dfs(mouse, cat, 0)
