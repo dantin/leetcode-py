@@ -875,6 +875,19 @@ def all_elements_in_two_binary_search_trees() -> None:
 
 
 @cli.command()
+def cat_and_mouse_ii() -> None:
+    """1728# Cat and Mouse II."""
+    from leetcode.cat_and_mouse_ii import Solution
+
+    grid = ['####F', '#C...', 'M....']
+    catJump, mouseJump = 1, 2
+    print(f' Input: grid = {grid}, catJump = {catJump}, mouseJump = {mouseJump}')
+    s = Solution()
+    x = s.canMouseWin(grid, catJump, mouseJump)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def find_the_winner_of_the_circular_game() -> None:
     """1823# Find the Winner of the Circular Game."""
     from leetcode.find_the_winner_of_the_circular_game import Solution
