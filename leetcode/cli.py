@@ -747,6 +747,19 @@ def find_all_duplicates_in_an_array() -> None:
 
 
 @cli.command()
+def serialize_and_deserialize_bst() -> None:
+    """449# Serialize and Deserialize Binary Search Tree."""
+    from leetcode.serialize_and_deserialize_bst import Codec
+
+    nums = [2, 1, 3]
+    print(f' Input: root = {nums}')
+    codec = Codec()
+    root = codec.deserialize(','.join(str(n) for n in nums))
+    raw = codec.serialize(root)
+    print(f' Input: [{raw}]')
+
+
+@cli.command()
 def tag_validator() -> None:
     """591# Tag Validator."""
     from leetcode.tag_validator import Solution

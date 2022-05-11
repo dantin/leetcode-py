@@ -42,6 +42,5 @@ class Solution:
                     food = x, y
                 elif grid[x][y] == 'M':
                     mouse = x, y
-        print(f'{cat}, {mouse}, {food}')
 
         return dfs(mouse, cat, 0)
