@@ -885,6 +885,18 @@ def di_string_match() -> None:
 
 
 @cli.command()
+def delete_columns_to_make_sorted() -> None:
+    """944# Delete Columns to Make Sorted."""
+    from leetcode.delete_columns_to_make_sorted import Solution
+
+    strs = ['cba', 'daf', 'ghi']
+    print(f' Input: strs = {strs}')
+    s = Solution()
+    x = s.minDeleteionSize(strs)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def all_elements_in_two_binary_search_trees() -> None:
     """1305# All Emements in Two Binary Search Trees."""
     from leetcode.all_elements_in_two_binary_search_trees import Solution
