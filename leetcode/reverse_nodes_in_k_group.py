@@ -16,8 +16,7 @@ class Solution:
                 p = tmp
             return tail, head
 
-        dummy = ListNode()
-        dummy.next = head
+        dummy = ListNode(next=head)
         pre = dummy
 
         while head:
