@@ -678,6 +678,18 @@ def n_queens() -> None:
 
 
 @cli.command()
+def n_queens_ii() -> None:
+    """52# N Queens II."""
+    from leetcode.n_queens_ii import Solution
+
+    n = 4
+    print(f' Input: n = {n}')
+    s = Solution()
+    x = s.totalNQueens(n)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def random_pick_index() -> None:
     """398# Random Pick Index."""
     from leetcode.random_pick_index import Solution
