@@ -934,3 +934,15 @@ def find_the_winner_of_the_circular_game() -> None:
     s = Solution()
     x = s.findTheWinner(n, k)
     print(f' Output: {x}')
+
+
+@cli.command()
+def one_away_lcci() -> None:
+    """01.05.# One Away Edit."""
+    from leetcode.one_way_lcci import Solution
+
+    first, second = 'pale', 'ple'
+    print(f' Input:\n first = {first}\n second = {second}')
+    s = Solution()
+    x = s.oneEditAway(first, second)
+    print(f' Output: {x}')
