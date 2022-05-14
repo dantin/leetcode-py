@@ -784,6 +784,19 @@ def tag_validator() -> None:
 
 
 @cli.command()
+def stickers_to_spell_word() -> None:
+    """691# Stickers to Spell Word."""
+    from leetcode.stickers_to_spell_word import Solution
+
+    stickers = ['with', 'example', 'science']
+    target = 'thehat'
+    print(f' Input: stickers = {stickers}, target = {target}')
+    s = Solution()
+    x = s.minStickers(stickers, target)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def subarray_product_less_than_k() -> None:
     """713# Subarray Product Less Than K."""
     from leetcode.subarray_product_less_than_k import Solution
