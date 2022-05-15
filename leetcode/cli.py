@@ -809,6 +809,18 @@ def subarray_product_less_than_k() -> None:
 
 
 @cli.command()
+def largest_triangle_area() -> None:
+    """812# Largest Triangle Area."""
+    from leetcode.largest_triangle_area import Solution
+
+    points = [[0, 0], [0, 1], [1, 0], [0, 2], [2, 0]]
+    print(f' Input: points = {points}')
+    s = Solution()
+    x = s.largestTriangleArea(points)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def binary_gap() -> None:
     """868# Binary Gap."""
     from leetcode.binary_gap import Solution
