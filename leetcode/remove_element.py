@@ -4,11 +4,20 @@ from typing import List
 
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
-        i, n = 0, len(nums)
-        while i < n:
-            if nums[i] == val:
-                nums[i] = nums[n - 1]
-                n -= 1
+        left, right = 0, len(nums)
+        while left < right:
+            if nums[left] == val:
+                nums[left] = nums[right - 1]
+                right -= 1
             else:
-                i += 1
-        return n
+                left += 1
+        return right
+
+    def removeElement2(self, nums: List[int], val: int) -> int:
+        fast, slow = 0, 0
+        while fast < len(nums):
+            if nums[fast] != val:
+                nums[slow] = nums[fast]
+                slow += 1
+            fast += 1
+        return slow

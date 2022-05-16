@@ -23,3 +23,17 @@ def make_tree(nums: List[int], pos: int) -> TreeNode:
         node.right = make_tree(nums, right)
 
     return node
+
+
+def find_node(root: TreeNode, val: int) -> TreeNode:
+    nodes = []
+    current = root
+    while nodes or current:
+        while current:
+            nodes.append(current)
+            current = current.left
+        current = nodes.pop()
+        if current.val == val:
+            return current
+        current = current.right
+    return None
