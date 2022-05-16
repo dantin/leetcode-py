@@ -963,7 +963,7 @@ def find_the_winner_of_the_circular_game() -> None:
 
 @cli.command()
 def one_away_lcci() -> None:
-    """01.05.# One Away Edit."""
+    """01.05. One Away Edit."""
     from leetcode.one_way_lcci import Solution
 
     first, second = 'pale', 'ple'
@@ -971,3 +971,18 @@ def one_away_lcci() -> None:
     s = Solution()
     x = s.oneEditAway(first, second)
     print(f' Output: {x}')
+
+
+@cli.command()
+def successor_lcci() -> None:
+    """04.06. Successor."""
+    from leetcode.utils.binary_search_tree import make_tree
+    from leetcode.successor_lcci import Solution
+
+    nums = [2, 1, 3]
+    p = 1
+    print(f' Input: root = {nums}, p = {p}')
+    root = make_tree(nums, 0)
+    s = Solution()
+    x = s.inorderSucessor(root, root.left)
+    print(f' Output: {x.val}')
