@@ -922,6 +922,21 @@ def delete_columns_to_make_sorted() -> None:
 
 
 @cli.command()
+def verifying_an_alien_dictionary() -> None:
+    """953# Verifying An Alien Dictionary."""
+    from leetcode.verifying_an_alien_dictionary import Solution
+
+    # words = ['hello', 'leetcode']
+    # order = 'hlabcdefgijkmnopqrstuvwxyz'
+    words = ["kxvyx", "ts"]
+    order = "tiwjpbemkhalsqzdvucorfgxyn"
+    print(f' Input: words = {words}, order = {order}')
+    s = Solution()
+    x = s.isAlienSorted(words, order)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def all_elements_in_two_binary_search_trees() -> None:
     """1305# All Emements in Two Binary Search Trees."""
     from leetcode.all_elements_in_two_binary_search_trees import Solution
@@ -976,13 +991,14 @@ def one_away_lcci() -> None:
 @cli.command()
 def successor_lcci() -> None:
     """04.06. Successor."""
-    from leetcode.utils.binary_search_tree import make_tree
+    from leetcode.utils.binary_search_tree import make_tree, find_node
     from leetcode.successor_lcci import Solution
 
     nums = [2, 1, 3]
     p = 1
     print(f' Input: root = {nums}, p = {p}')
     root = make_tree(nums, 0)
+    target = find_node(root, p)
     s = Solution()
-    x = s.inorderSucessor(root, root.left)
+    x = s.inorderSucessor(root, target)
     print(f' Output: {x.val}')
