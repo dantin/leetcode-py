@@ -784,6 +784,19 @@ def tag_validator() -> None:
 
 
 @cli.command()
+def kth_smallest_number_in_multiplication_table() -> None:
+    """668# Kth Smallest Number in Multiplication Table."""
+    from leetcode.kth_smallest_number_in_multiplication_table import Solution
+
+    m, n = 3, 3
+    k = 5
+    print(f' Input: m = {m}, n = {n}, k = {k}')
+    s = Solution()
+    x = s.findKthNumber(m, n, k)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def stickers_to_spell_word() -> None:
     """691# Stickers to Spell Word."""
     from leetcode.stickers_to_spell_word import Solution
