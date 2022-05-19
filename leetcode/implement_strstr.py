@@ -23,12 +23,12 @@ class Solution:
             target = haystack[i:i + len(needle)]
             if target == needle:
                 return i
+
+            if i + len(needle) >= len(haystack):
+                return -1
+            cur_c = haystack[i + len(needle)]
+            if cur_c in mat:
+                i += mat[cur_c]
             else:
-                if i + len(needle) >= len(haystack):
-                    return -1
-                cur_c = haystack[i + len(needle)]
-                if cur_c in mat:
-                    i += mat[cur_c]
-                else:
-                    i += mat['ot']
+                i += mat['ot']
         return -1 if i + len(needle) >= len(haystack) else i
