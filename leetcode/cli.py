@@ -772,6 +772,18 @@ def serialize_and_deserialize_bst() -> None:
 
 
 @cli.command()
+def minimum_moves_to_equal_array_elements_ii() -> None:
+    """462# Minimum Moves to Equal Array Elements II."""
+    from leetcode.minimum_moves_to_equal_array_elements_ii import Solution
+
+    nums = [1, 2, 3]
+    print(f' Input: nums = {nums}')
+    s = Solution()
+    x = s.minMoves2(nums)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def tag_validator() -> None:
     """591# Tag Validator."""
     from leetcode.tag_validator import Solution
