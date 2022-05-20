@@ -3,27 +3,28 @@
 class Solution:
     def divide(self, dividend: int, divisor: int) -> int:
         MIN_INT, MAX_INT = -2 ** 31, 2 ** 31 - 1
+
         flag = 1
         if dividend < 0:
             flag, dividend = -flag, -dividend
         if divisor < 0:
             flag, divisor = -flag, -divisor
 
-        res = 0
+        quotient = 0
         while dividend >= divisor:
-            cur = divisor
+            c = divisor
             multiple = 1
-            while cur + cur < dividend:
-                cur += cur
+            while c + c < dividend:
+                c += c
                 multiple += multiple
-            dividend -= cur
-            res += multiple
+            dividend -= c
+            quotient += multiple
 
-        res = res if flag > 0 else -res
+        quotient = quotient if flag > 0 else -quotient
 
-        if res < MIN_INT:
+        if quotient < MIN_INT:
             return MIN_INT
-        elif MIN_INT <= res <= MAX_INT:
-            return res
-        else:
+        if quotient > MAX_INT:
             return MAX_INT
+
+        return quotient
