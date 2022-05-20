@@ -9,7 +9,6 @@ class Solution:
             for i in range(len(s) - 1, -1, -1):
                 if s[i] not in steps:
                     steps[s[i]] = len(s) - i
-            steps['out'] = len(s) + 1
             return steps
 
         if len(needle) > len(haystack):
@@ -28,8 +27,6 @@ class Solution:
                 return -1
 
             ch = haystack[i + len(needle)]
-            if ch in steps:
-                i += steps[ch]
-            else:
-                i += steps['out']
+            i += steps.get(ch, len(needle) + 1)
+
         return -1 if i + len(needle) >= len(haystack) else i
