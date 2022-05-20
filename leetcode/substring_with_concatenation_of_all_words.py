@@ -16,8 +16,8 @@ class Solution:
 
         res = []
         for i in range(word_len):
-            cur_word_cnt = 0
-            cur_word_freq = defaultdict(int)
+            cur_cnt = 0
+            cur_freq = defaultdict(int)
 
             left, right = i, i
             while right + word_len <= len(s):
@@ -26,16 +26,18 @@ class Solution:
 
                 if w not in word_freq:
                     left = right
-                    cur_word_freq.clear()
-                    cur_word_cnt = 0
-                else:
-                    cur_word_freq[w] += 1
-                    cur_word_cnt += 1
-                    while cur_word_freq[w] > word_freq[w]:
-                        left_word = s[left:left + word_len]
-                        left += word_len
-                        cur_word_freq[left_word] -= 1
-                        cur_word_cnt -= 1
-                    if cur_word_cnt == word_cnt:
-                        res.append(left)
+                    cur_freq.clear()
+                    cur_cnt = 0
+                    continue
+
+                cur_freq[w] += 1
+                cur_cnt += 1
+                while cur_freq[w] > word_freq[w]:
+                    left_word = s[left:left + word_len]
+                    left += word_len
+                    cur_freq[left_word] -= 1
+                    cur_cnt -= 1
+                if cur_cnt == word_cnt:
+                    res.append(left)
+
         return res
