@@ -747,6 +747,18 @@ def minimum_genetic_mutation() -> None:
 
 
 @cli.command()
+def find_right_interval() -> None:
+    """436# Find Right Interval."""
+    from leetcode.find_right_interval import Solution
+
+    intervals = [[1, 2]]
+    print(f' Input: intervals = {intervals}')
+    s = Solution()
+    x = s.findRightInterval(intervals)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def find_all_duplicates_in_an_array() -> None:
     """442# Find All Duplicates in An Array."""
     from leetcode.find_all_duplicates_in_an_array import Solution
