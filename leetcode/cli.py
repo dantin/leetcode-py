@@ -974,6 +974,18 @@ def verifying_an_alien_dictionary() -> None:
 
 
 @cli.command()
+def n_repeated_element_in_size_2n_array() -> None:
+    """961# N Repeated Element in Size 2N Array."""
+    from n_repeated_element_in_size_2n_array import Solution
+
+    nums = [1, 2, 3, 3]
+    print(f' Input: nums = {nums}')
+    s = Solution()
+    x = s.repeatedNTimes(nums)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def all_elements_in_two_binary_search_trees() -> None:
     """1305# All Emements in Two Binary Search Trees."""
     from leetcode.all_elements_in_two_binary_search_trees import Solution
