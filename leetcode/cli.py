@@ -796,6 +796,19 @@ def minimum_moves_to_equal_array_elements_ii() -> None:
 
 
 @cli.command()
+def can_i_win() -> None:
+    """464# Can I Win."""
+    from leetcode.can_i_win import Solution
+
+    max_choosible_integer = 10
+    desired_total = 11
+    print(f' Input: maxChoosableInteger = {max_choosible_integer}, desiredTotal = {desired_total}')
+    s = Solution()
+    x = s.canIWin(max_choosible_integer, desired_total)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def tag_validator() -> None:
     """591# Tag Validator."""
     from leetcode.tag_validator import Solution
