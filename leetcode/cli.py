@@ -834,6 +834,18 @@ def kth_smallest_number_in_multiplication_table() -> None:
 
 
 @cli.command()
+def cut_off_trees_for_golf_event() -> None:
+    """675# Cut Off Trees for Golf Event."""
+    from leetcode.cut_off_trees_for_golf_event import Solution
+
+    forest = [[1, 2, 3], [0, 0, 4], [7, 6, 5]]
+    print(f' Input: forest = {forest}')
+    s = Solution()
+    x = s.cutOffTree(forest)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def stickers_to_spell_word() -> None:
     """691# Stickers to Spell Word."""
     from leetcode.stickers_to_spell_word import Solution
