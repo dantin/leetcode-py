@@ -1011,6 +1011,20 @@ def n_repeated_element_in_size_2n_array() -> None:
 
 
 @cli.command()
+def univalued_binary_tree() -> None:
+    """965# Univalued Binary Tree."""
+    from leetcode.univalued_binary_tree import Solution
+    from leetcode.utils.binary_search_tree import make_tree
+
+    nums = [1, 1, 1, 1, 1, None, 1]
+    print(f' Input: {nums}')
+    root = make_tree(nums, 0)
+    s = Solution()
+    x = s.isUnivalTree(root)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def all_elements_in_two_binary_search_trees() -> None:
     """1305# All Emements in Two Binary Search Trees."""
     from leetcode.all_elements_in_two_binary_search_trees import Solution
