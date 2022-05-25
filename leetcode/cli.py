@@ -809,6 +809,18 @@ def can_i_win() -> None:
 
 
 @cli.command()
+def unique_substrings_in_wraparound_string() -> None:
+    """467# Unique Substrings in Wraparound String."""
+    from leetcode.unique_substrings_in_wraparound_string import Solution
+
+    p = 'a'
+    print(f' Input: p = "{p}"')
+    s = Solution()
+    x = s.findSubstringInWraproundString(p)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def tag_validator() -> None:
     """591# Tag Validator."""
     from leetcode.tag_validator import Solution
