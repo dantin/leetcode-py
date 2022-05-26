@@ -871,6 +871,18 @@ def stickers_to_spell_word() -> None:
 
 
 @cli.command()
+def falling_squares() -> None:
+    """699# Falling Squares."""
+    from leetcode.falling_squares import Solution
+
+    positions = [[1, 2], [2, 3], [6, 1]]
+    print(f' Input: positions = {positions}')
+    s = Solution()
+    x = s.fallingSquares(positions)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def subarray_product_less_than_k() -> None:
     """713# Subarray Product Less Than K."""
     from leetcode.subarray_product_less_than_k import Solution
