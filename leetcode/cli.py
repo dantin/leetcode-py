@@ -1114,3 +1114,16 @@ def successor_lcci() -> None:
     s = Solution()
     x = s.inorderSucessor(root, target)
     print(f' Output: {x.val}')
+
+
+@cli.command()
+def find_closest_lcci() -> None:
+    """17.11. Find Closest."""
+    from leetcode.find_closest_lcci import Solution
+
+    words = ['I', 'am', 'a', 'student', 'from', 'a', 'university', 'in', 'a', 'city']
+    word1, word2 = 'a', 'student'
+    print(f' Input: words = {words}, word1 = {word1}, word2 = {word2}')
+    s = Solution()
+    x = s.findClosest(words, word1, word2)
+    print(f' Output: {x}')
