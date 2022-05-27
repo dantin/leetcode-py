@@ -1049,6 +1049,18 @@ def univalued_binary_tree() -> None:
 
 
 @cli.command()
+def remove_outermost_parentheses() -> None:
+    """1021# Remove Outermost Parentheses."""
+    from leetcode.remove_outermost_parentheses import Solution
+
+    s = '(()())(())'
+    print(f' Input: s = "{s}"')
+    solution = Solution()
+    x = solution.removeOuterParentheses(s)
+    print(f' Output: "{x}"')
+
+
+@cli.command()
 def all_elements_in_two_binary_search_trees() -> None:
     """1305# All Emements in Two Binary Search Trees."""
     from leetcode.all_elements_in_two_binary_search_trees import Solution
