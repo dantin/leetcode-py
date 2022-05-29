@@ -821,6 +821,18 @@ def unique_substrings_in_wraparound_string() -> None:
 
 
 @cli.command()
+def validate_ip_address() -> None:
+    """468# Validate IP Address."""
+    from leetcode.validate_ip_address import Solution
+
+    queryIP = '172.16.254.1'
+    print(f' Input: queryIP = "{queryIP}"')
+    s = Solution()
+    x = s.validIPAddress(queryIP)
+    print(f' Output: "{x}"')
+
+
+@cli.command()
 def tag_validator() -> None:
     """591# Tag Validator."""
     from leetcode.tag_validator import Solution
