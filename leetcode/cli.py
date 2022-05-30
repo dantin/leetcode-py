@@ -1073,6 +1073,20 @@ def remove_outermost_parentheses() -> None:
 
 
 @cli.command()
+def sum_of_root_to_leaf_binary_numbers() -> None:
+    """1022# Sum of Root to Leaf Binary Numbers."""
+    from leetcode.sum_of_root_to_leaf_binary_numbers import Solution
+    from leetcode.utils.binary_search_tree import make_tree
+
+    nums = [1, 0, 1, 0, 1, 0, 1]
+    root = make_tree(nums, 0)
+    print(f' root = {nums}')
+    s = Solution()
+    x = s.sumRootToLeaf(root)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def all_elements_in_two_binary_search_trees() -> None:
     """1305# All Emements in Two Binary Search Trees."""
     from leetcode.all_elements_in_two_binary_search_trees import Solution
