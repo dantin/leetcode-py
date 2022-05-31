@@ -11,20 +11,21 @@ class Solution:
                 return
 
             i, j = spaces[pos]
+            k = (i // 3) * 3 + j // 3
             for digit in range(9):
                 if ((not lines[i][digit]) and
                         (not columns[j][digit]) and
-                        (not boxes[i // 3][j // 3][digit])):
-                    lines[i][digit] = columns[j][digit] = boxes[i // 3][j // 3][digit] = True
+                        (not boxes[k][digit])):
+                    lines[i][digit] = columns[j][digit] = boxes[k][digit] = True
                     board[i][j] = str(digit + 1)
                     dfs(pos + 1)
-                    lines[i][digit] = columns[j][digit] = boxes[i // 3][j // 3][digit] = False
+                    lines[i][digit] = columns[j][digit] = boxes[k][digit] = False
                 if done:
                     return
 
         lines = [[False] * 9 for _ in range(9)]
         columns = [[False] * 9 for _ in range(9)]
-        boxes = [[[False] * 9 for _i in range(3)] for _j in range(3)]
+        boxes = [[False] * 9 for _ in range(9)]
         done = False
         spaces = []
 
@@ -34,6 +35,7 @@ class Solution:
                     spaces.append((i, j))
                 else:
                     digit = int(board[i][j]) - 1
-                    lines[i][digit] = columns[j][digit] = boxes[i // 3][j // 3][digit] = True
+                    k = (i // 3) * 3 + j // 3
+                    lines[i][digit] = columns[j][digit] = boxes[k][digit] = True
 
         dfs(0)
