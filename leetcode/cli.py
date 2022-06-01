@@ -1165,3 +1165,15 @@ def find_closest_lcci() -> None:
     s = Solution()
     x = s.findClosest(words, word1, word2)
     print(f' Output: {x}')
+
+
+@cli.command()
+def alien_dictionary() -> None:
+    """Offer II 114. Alien Dictionary."""
+    from leetcode.alien_dictionary import Solution
+
+    words = ['wrt', 'wrf', 'er', 'ett', 'rftt']
+    print(f' Input: words = {words}')
+    s = Solution()
+    x = s.alienOrder(words)
+    print(f' Output: "{x}"')
