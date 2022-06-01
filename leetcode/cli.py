@@ -833,6 +833,18 @@ def validate_ip_address() -> None:
 
 
 @cli.command()
+def matchsticks_to_square() -> None:
+    """473# Matchsticks to Square."""
+    from leetcode.matchsticks_to_square import Solution
+
+    matchsticks = [1, 1, 2, 2, 2]
+    print(f' Input: matchsticks = {matchsticks}')
+    s = Solution()
+    x = s.makesquare(matchsticks)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def tag_validator() -> None:
     """591# Tag Validator."""
     from leetcode.tag_validator import Solution
