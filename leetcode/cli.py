@@ -784,6 +784,22 @@ def serialize_and_deserialize_bst() -> None:
 
 
 @cli.command()
+def delete_node_in_a_bst() -> None:
+    """450# Delete Node in a Binary Search Tree."""
+    from leetcode.delete_node_in_a_bst import Solution
+    from leetcode.utils.binary_search_tree import make_tree, dump_tree
+
+    nums = [5, 3, 6, 2, 4, None, 7]
+    key = 3
+    print(f' Input: root = {nums}, key = {key}')
+    root = make_tree(nums, 0)
+    s = Solution()
+    root = s.deleteNode(root, key)
+    x = dump_tree(root)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def minimum_moves_to_equal_array_elements_ii() -> None:
     """462# Minimum Moves to Equal Array Elements II."""
     from leetcode.minimum_moves_to_equal_array_elements_ii import Solution
