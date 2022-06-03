@@ -947,6 +947,18 @@ def largest_triangle_area() -> None:
 
 
 @cli.command()
+def consecutive_numbers_sum() -> None:
+    """829# Consecutive Numbers Sum."""
+    from leetcode.consecutive_numbers_sum import Solution
+
+    n = 5
+    print(f' Input: n = {n}')
+    s = Solution()
+    x = s.consecutiveNumbersSum(n)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def binary_gap() -> None:
     """868# Binary Gap."""
     from leetcode.binary_gap import Solution
