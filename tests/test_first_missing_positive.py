@@ -14,6 +14,7 @@ def solution():
         ([1, 2, 0], 3),
         ([3, 4, -1, 1], 2),
         ([7, 8, 9, 11, 12], 1),
+        ([2, 1], 3)
     ],
 )
 def test_first_missing_positive(solution, nums, expected):
