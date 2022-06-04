@@ -1007,6 +1007,19 @@ def smallest_range_i() -> None:
 
 
 @cli.command()
+def unique_email_addresses() -> None:
+    """929# Unique Email Addresses."""
+    from leetcode.unique_email_addresses import Solution
+
+    emails = ['test.email+alex@leetcode.com', 'test.e.mail+bob.cathy@leetcode.com',
+              'testemail+david@lee.tcode.com']
+    print(f' Input: emails = {emails}')
+    s = Solution()
+    x = s.numUniqueEmails(emails)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def number_of_recent_calls() -> None:
     """933# Number of Recent Calls."""
     from leetcode.number_of_recent_calls import RecentCounter
