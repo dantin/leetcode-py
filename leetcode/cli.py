@@ -861,6 +861,25 @@ def matchsticks_to_square() -> None:
 
 
 @cli.command()
+def generate_random_point_in_a_circle() -> None:
+    """478# Generate Random Point in a Circle."""
+    from leetcode.generate_random_point_in_a_circle import Solution
+
+    cmds = ['Solution', 'randPoint', 'randPoint', 'randPoint']
+    params = [[1.0, 0.0, 0.0], [], [], []]
+    print(f'Input:\n{cmds}\n{params}')
+    output = []
+    for cmd, param in zip(cmds, params):
+        if cmd == 'Solution':
+            s = Solution(*param)
+            output.append(None)
+        elif cmd == 'randPoint':
+            x = s.randPoint()
+            output.append(x)
+    print(f' Output: {output}')
+
+
+@cli.command()
 def tag_validator() -> None:
     """591# Tag Validator."""
     from leetcode.tag_validator import Solution
