@@ -7,14 +7,15 @@ class Solution:
         if not height:
             return 0
 
-        n = len(height)
-        leftMax = [height[0]] + [0] * (n - 1)
-        for i in range(1, n):
-            leftMax[i] = max(leftMax[i - 1], height[i])
+        size = len(height)
 
-        rightMax = [0] * (n - 1) + [height[n - 1]]
-        for i in range(n - 2, -1, -1):
-            rightMax[i] = max(rightMax[i + 1], height[i])
+        left_max = [height[0]] + [0] * (size - 1)
+        for i in range(1, size):
+            left_max[i] = max(left_max[i - 1], height[i])
 
-        total = sum(min(leftMax[i], rightMax[i]) - height[i] for i in range(n))
+        right_max = [0] * (size - 1) + [height[size - 1]]
+        for i in range(size - 2, -1, -1):
+            right_max[i] = max(right_max[i + 1], height[i])
+
+        total = sum(min(left_max[i], right_max[i]) - height[i] for i in range(size))
         return total
