@@ -868,15 +868,13 @@ def generate_random_point_in_a_circle() -> None:
     cmds = ['Solution', 'randPoint', 'randPoint', 'randPoint']
     params = [[1.0, 0.0, 0.0], [], [], []]
     print(f'Input:\n{cmds}\n{params}')
-    output = []
+    s = Solution(*params[0])
+    output = [None]
     for cmd, param in zip(cmds, params):
-        if cmd == 'Solution':
-            s = Solution(*param)
-            output.append(None)
-        elif cmd == 'randPoint':
+        if cmd == 'randPoint':
             x = s.randPoint()
             output.append(x)
-    print(f' Output: {output}')
+    print(f'Output:\n{output}')
 
 
 @cli.command()
@@ -951,6 +949,24 @@ def subarray_product_less_than_k() -> None:
     s = Solution()
     x = s.numSubarrayProductLessThanK(nums, k)
     print(f' Output: {x}')
+
+
+@cli.command()
+def my_calendar_iii() -> None:
+    """732# My Calendar III."""
+    from leetcode.my_calendar_iii import MyCalendarThree
+
+    cmds = ['MyCalendarThree', 'book', 'book', 'book', 'book', 'book', 'book']
+    params = [[], [10, 20], [50, 60], [10, 40], [5, 15], [5, 10], [25, 55]]
+    print(f'Input:\n{cmds}\n{params}')
+
+    s = MyCalendarThree()
+    output = [None]
+    for cmd, param in zip(cmds, params):
+        if cmd == 'book':
+            x = s.book(*param)
+            output.append(x)
+    print(f'Output:\n{output}')
 
 
 @cli.command()
