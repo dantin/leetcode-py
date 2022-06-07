@@ -1006,6 +1006,19 @@ def binary_gap() -> None:
 
 
 @cli.command()
+def koko_eating_bananas() -> None:
+    """Koko Eating Bananas."""
+    from leetcode.koko_eating_bananas import Solution
+
+    piles = [3, 6, 7, 11]
+    h = 8
+    print(f' Input: piles = {piles}, h = {h}')
+    s = Solution()
+    x = s.minEatingSpeed(piles, h)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def projection_area_of_3d_shapes() -> None:
     """883# Projection Area of 3D-Shapes."""
     from leetcode.projection_area_of_3d_shapes import Solution
