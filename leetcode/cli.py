@@ -878,6 +878,23 @@ def generate_random_point_in_a_circle() -> None:
 
 
 @cli.command()
+def random_point_in_non_overlapping_rectangles() -> None:
+    """497. Random Point in Non-overlapping Rectangles."""
+    from leetcode.random_point_in_non_overlapping_rectangles import Solution
+
+    cmds = ['Solution', 'pick', 'pick', 'pick', 'pick', 'pick']
+    params = [[[[-2, -2, 1, 1], [2, 2, 4, 6]]], [], [], [], [], []]
+    print(f'Input:\n{cmds}')
+    s = Solution(*params[0])
+    output = [None]
+    for cmd, param in zip(cmds, params):
+        if cmd == 'pick':
+            x = s.pick()
+            output.append(x)
+    print(f'Output:\n{output}')
+
+
+@cli.command()
 def tag_validator() -> None:
     """591# Tag Validator."""
     from leetcode.tag_validator import Solution
