@@ -969,6 +969,18 @@ def subarray_product_less_than_k() -> None:
 
 
 @cli.command()
+def count_different_palindromic_subsequences() -> None:
+    """730# Count Different Palindromic Subsequences."""
+    from leetcode.count_different_palindromic_subsequences import Solution
+
+    s = 'bccb'
+    print(f' Input: s = {s}')
+    solution = Solution()
+    x = solution.countPalindromicSubsequences(s)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def my_calendar_iii() -> None:
     """732# My Calendar III."""
     from leetcode.my_calendar_iii import MyCalendarThree
