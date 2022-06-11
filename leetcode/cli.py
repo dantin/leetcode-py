@@ -1229,6 +1229,18 @@ def sum_of_root_to_leaf_binary_numbers() -> None:
 
 
 @cli.command()
+def valid_boomerang() -> None:
+    """1037# Valid Boomerang."""
+    from leetcode.valid_boomerang import Solution
+
+    points = [[1, 1], [2, 3], [3, 2]]
+    print(f' Input: points = {points}')
+    s = Solution()
+    x = s.isBoomerang(points)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def all_elements_in_two_binary_search_trees() -> None:
     """1305# All Emements in Two Binary Search Trees."""
     from leetcode.all_elements_in_two_binary_search_trees import Solution
