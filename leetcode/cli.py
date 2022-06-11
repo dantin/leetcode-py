@@ -1084,6 +1084,18 @@ def smallest_range_i() -> None:
 
 
 @cli.command()
+def flip_string_to_monotone_increasing() -> None:
+    """926# Flip String to Monotone Increasing."""
+    from leetcode.flip_string_to_monotone_increasing import Solution
+
+    s = '00110'
+    print(f' Input: s = "{s}"')
+    solution = Solution()
+    x = solution.minFlipsMonoIncr(s)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def unique_email_addresses() -> None:
     """929# Unique Email Addresses."""
     from leetcode.unique_email_addresses import Solution
