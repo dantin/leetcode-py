@@ -1241,6 +1241,18 @@ def valid_boomerang() -> None:
 
 
 @cli.command()
+def height_checker() -> None:
+    """1051# Height Checker."""
+    from leetcode.height_checker import Solution
+
+    heights = [1, 1, 4, 2, 1, 3]
+    print(f' Input: heights = {heights}')
+    s = Solution()
+    x = s.heightChecker(heights)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def all_elements_in_two_binary_search_trees() -> None:
     """1305# All Emements in Two Binary Search Trees."""
     from leetcode.all_elements_in_two_binary_search_trees import Solution
