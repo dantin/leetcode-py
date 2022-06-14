@@ -895,6 +895,18 @@ def random_point_in_non_overlapping_rectangles() -> None:
 
 
 @cli.command()
+def diagonal_traverse() -> None:
+    """498# Diagonal Traverse."""
+    from leetcode.diagonal_traverse import Solution
+
+    mat = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    print(f' Input: mat = {mat}')
+    s = Solution()
+    x = s.findDiagonalOrder(mat)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def tag_validator() -> None:
     """591# Tag Validator."""
     from leetcode.tag_validator import Solution
