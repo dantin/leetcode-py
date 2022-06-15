@@ -981,6 +981,19 @@ def subarray_product_less_than_k() -> None:
 
 
 @cli.command()
+def find_k_th_smallest_pair_distance() -> None:
+    """719# Find Kth Smallest Pair Distance."""
+    from leetcode.find_k_th_smallest_pair_distance import Solution
+
+    nums = [1, 3, 1]
+    k = 1
+    print(f' Input: nums = {nums}, k = {k}')
+    s = Solution()
+    x = s.smallestDistancePair(nums, k)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def count_different_palindromic_subsequences() -> None:
     """730# Count Different Palindromic Subsequences."""
     from leetcode.count_different_palindromic_subsequences import Solution
