@@ -907,6 +907,19 @@ def diagonal_traverse() -> None:
 
 
 @cli.command()
+def k_diff_pairs_in_an_array() -> None:
+    """532# K Diff Pairs in an Array."""
+    from leetcode.k_diff_pairs_in_an_array import Solution
+
+    nums = [3, 1, 4, 1, 5]
+    k = 2
+    print(f' Input: nums = {nums}, k = {k}')
+    s = Solution()
+    x = s.findPairs(nums, k)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def tag_validator() -> None:
     """591# Tag Validator."""
     from leetcode.tag_validator import Solution
