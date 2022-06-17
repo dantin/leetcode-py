@@ -6,7 +6,7 @@ class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
         def backtrack(pos: int) -> None:
             if pos == n:
-                res.append(nums[:])
+                permutation.append(nums[:])
                 return
             for i in range(pos, n):
                 nums[pos], nums[i] = nums[i], nums[pos]
@@ -14,6 +14,6 @@ class Solution:
                 nums[pos], nums[i] = nums[i], nums[pos]
 
         n = len(nums)
-        res = []
+        permutation = []
         backtrack(0)
-        return res
+        return permutation
