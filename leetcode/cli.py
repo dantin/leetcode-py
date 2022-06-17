@@ -1291,6 +1291,18 @@ def height_checker() -> None:
 
 
 @cli.command()
+def duplicate_zeros() -> None:
+    """1089# Duplicate Zeros."""
+    from leetcode.duplicate_zeros import Solution
+
+    nums = [1, 0, 2, 3, 0, 4, 5, 0]
+    print(f' Input: {nums}')
+    s = Solution()
+    s.duplicateZeros(nums)
+    print(f' Input: {nums}')
+
+
+@cli.command()
 def all_elements_in_two_binary_search_trees() -> None:
     """1305# All Emements in Two Binary Search Trees."""
     from leetcode.all_elements_in_two_binary_search_trees import Solution
