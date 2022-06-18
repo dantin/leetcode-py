@@ -1384,6 +1384,22 @@ def find_closest_lcci() -> None:
 
 
 @cli.command()
+def sorted_cycle_linked_list() -> None:
+    from leetcode.sorted_cycle_linked_list import Solution
+    from leetcode.utils.cycle_linked_list import build, dump
+
+    nums = [3, 4, 1]
+    val = 2
+    print(f' Input: head = {nums}, insertVal = {val}')
+    head = build(nums)
+
+    s = Solution()
+    head = s.insert(head, val)
+    x = dump(head)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def alien_dictionary() -> None:
     """Offer II 114. Alien Dictionary."""
     from leetcode.alien_dictionary import Solution
