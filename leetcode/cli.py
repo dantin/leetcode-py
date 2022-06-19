@@ -907,6 +907,20 @@ def diagonal_traverse() -> None:
 
 
 @cli.command()
+def most_frequent_substree_sum() -> None:
+    """508: Most Frquent Subtree Sum."""
+    from leetcode.most_frequent_subtree_sum import Solution
+    from leetcode.utils.binary_search_tree import make_tree
+
+    nums = [5, 2, -3]
+    print(f' Input: {nums}')
+    root = make_tree(nums, 0)
+    s = Solution()
+    x = s.findFrequentTreeSum(root)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def k_diff_pairs_in_an_array() -> None:
     """532# K Diff Pairs in an Array."""
     from leetcode.k_diff_pairs_in_an_array import Solution
@@ -1385,6 +1399,7 @@ def find_closest_lcci() -> None:
 
 @cli.command()
 def sorted_cycle_linked_list() -> None:
+    """Offer II 209. Sortd cycle linked list."""
     from leetcode.sorted_cycle_linked_list import Solution
     from leetcode.utils.cycle_linked_list import build, dump
 
