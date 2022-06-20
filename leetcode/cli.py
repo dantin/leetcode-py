@@ -1008,6 +1008,29 @@ def subarray_product_less_than_k() -> None:
 
 
 @cli.command()
+def range_module() -> None:
+    """715# Range Module."""
+    from leetcode.range_module import RangeModule
+    cmds = ['RangeModule', 'addRange', 'removeRange', 'queryRange', 'queryRange', 'queryRange']
+    params = [[], [10, 20], [14, 16], [10, 14], [13, 15], [16, 17]]
+    print(f'Input:\n{cmds}\n{params}')
+
+    s = RangeModule()
+    output = [None]
+    for cmd, param in zip(cmds, params):
+        if cmd == 'addRange':
+            x = s.addRange(*param)
+        elif cmd == 'removeRange':
+            x = s.removeRange(*param)
+        elif cmd == 'queryRange':
+            x = s.queryRange(*param)
+        else:
+            continue
+        output.append(x)
+    print(f'Output:\n{output}')
+
+
+@cli.command()
 def find_k_th_smallest_pair_distance() -> None:
     """719# Find Kth Smallest Pair Distance."""
     from leetcode.find_k_th_smallest_pair_distance import Solution
