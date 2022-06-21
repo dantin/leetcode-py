@@ -1340,6 +1340,18 @@ def duplicate_zeros() -> None:
 
 
 @cli.command()
+def defanging_an_ip_address() -> None:
+    """1108# Defanging an IP Address."""
+    from leetcode.defanging_an_ip_address import Solution
+
+    address = '1.1.1.1'
+    print(f' Input: address = {address}')
+    s = Solution()
+    x = s.defangIPaddr(address)
+    print(f' Input: {x}')
+
+
+@cli.command()
 def all_elements_in_two_binary_search_trees() -> None:
     """1305# All Emements in Two Binary Search Trees."""
     from leetcode.all_elements_in_two_binary_search_trees import Solution
