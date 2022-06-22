@@ -739,6 +739,19 @@ def insert_interval() -> None:
 
 
 @cli.command()
+def permutation_sequence() -> None:
+    """60# Permutation Sequence."""
+    from leetcode.permutation_sequence import Solution
+
+    n = 3
+    k = 3
+    print(f' Input: n = {n}, k = {k}')
+    s = Solution()
+    x = s.getPermutation(n, k)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def random_pick_index() -> None:
     """398# Random Pick Index."""
     from leetcode.random_pick_index import Solution
