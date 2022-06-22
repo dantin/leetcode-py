@@ -702,6 +702,18 @@ def maximum_subarray() -> None:
 
 
 @cli.command()
+def spiral_matrix() -> None:
+    """54# Spiral Matrix."""
+    from leetcode.spiral_matrix import Solution
+
+    matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    print(f' Input: matrix = {matrix}')
+    s = Solution()
+    x = s.spiralOrder(matrix)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def random_pick_index() -> None:
     """398# Random Pick Index."""
     from leetcode.random_pick_index import Solution
