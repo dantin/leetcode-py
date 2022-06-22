@@ -9,25 +9,27 @@ class Solution:
 
         def backtrack(pos: int) -> None:
             if pos == len(nums):
-                res.append(cache[:])
+                permutations.append(cache[:])
                 return
             for i in range(len(nums)):
-                if check[i] == 1:
+                if check[i]:
                     continue
-                if i > 0 and nums[i] == nums[i - 1] and check[i - 1] == 0:
+                if i > 0 and nums[i] == nums[i - 1] and not check[i - 1]:
                     # choose all or choose none.
                     continue
-                check[i] = 1
+
+                check[i] = True
                 cache.append(nums[i])
                 backtrack(pos + 1)
                 cache.pop()
-                check[i] = 0
+                check[i] = False
 
-        res = []
         nums.sort()
-        check = [0 for i in range(len(nums))]
+        check = [False] * len(nums)
+
+        permutations = []
         cache = []
 
         backtrack(0)
 
-        return res
+        return permutations

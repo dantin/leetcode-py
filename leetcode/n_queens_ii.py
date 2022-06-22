@@ -2,7 +2,7 @@
 
 class Solution:
     def totalNQueens(self, n: int) -> int:
-        def backtrace(row: int) -> int:
+        def backtrack(row: int) -> int:
             if row == n:
                 return 1
 
@@ -13,7 +13,7 @@ class Solution:
                 columns.add(col)
                 diagonal1.add(row - col)
                 diagonal2.add(row + col)
-                count += backtrace(row + 1)
+                count += backtrack(row + 1)
                 columns.remove(col)
                 diagonal1.remove(row - col)
                 diagonal2.remove(row + col)
@@ -22,4 +22,4 @@ class Solution:
         columns = set()
         diagonal1 = set()
         diagonal2 = set()
-        return backtrace(0)
+        return backtrack(0)

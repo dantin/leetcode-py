@@ -15,7 +15,7 @@ class Solution:
                 row[queens[i]] = '.'
             return board
 
-        def backtrace(row: int):
+        def backtrack(row: int):
             if row == n:
                 board = generate_board()
                 solutions.append(board)
@@ -28,7 +28,7 @@ class Solution:
                 columns.add(col)
                 diagonal1.add(row - col)
                 diagonal2.add(row + col)
-                backtrace(row + 1)
+                backtrack(row + 1)
                 columns.remove(col)
                 diagonal1.remove(row - col)
                 diagonal2.remove(row + col)
@@ -38,5 +38,5 @@ class Solution:
         columns = set()
         diagonal1 = set()
         diagonal2 = set()
-        backtrace(0)
+        backtrack(0)
         return solutions
