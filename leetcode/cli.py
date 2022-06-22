@@ -714,6 +714,18 @@ def spiral_matrix() -> None:
 
 
 @cli.command()
+def merge_intervals() -> None:
+    """56# Merge Intervals."""
+    from leetcode.merge_intervals import Solution
+
+    intervals = [[1, 3], [2, 6], [8, 10], [15, 18]]
+    print(f' Input: intervals = {intervals}')
+    s = Solution()
+    x = s.merge(intervals)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def random_pick_index() -> None:
     """398# Random Pick Index."""
     from leetcode.random_pick_index import Solution
