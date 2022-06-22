@@ -726,6 +726,19 @@ def merge_intervals() -> None:
 
 
 @cli.command()
+def insert_interval() -> None:
+    """57# Insert Interval."""
+    from leetcode.insert_interval import Solution
+
+    intervals = [[1, 3], [6, 9]]
+    newInterval = [2, 5]
+    print(f' Input: intervals = {intervals}, newInterval = {newInterval}')
+    s = Solution()
+    x = s.insert(intervals, newInterval)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def random_pick_index() -> None:
     """398# Random Pick Index."""
     from leetcode.random_pick_index import Solution
