@@ -690,6 +690,18 @@ def n_queens_ii() -> None:
 
 
 @cli.command()
+def maximum_subarray() -> None:
+    """53# Maximum Subarray."""
+    from leetcode.maximum_subarray import Solution
+
+    nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+    print(f' Input: nums = {nums}')
+    s = Solution()
+    x = s.maxSubArray(nums)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def random_pick_index() -> None:
     """398# Random Pick Index."""
     from leetcode.random_pick_index import Solution
