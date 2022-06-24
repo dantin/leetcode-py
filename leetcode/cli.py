@@ -983,8 +983,22 @@ def most_frequent_substree_sum() -> None:
 
 
 @cli.command()
+def find_bottom_left_tree_value() -> None:
+    """513# Find Bottom Left Tree Value."""
+    from leetcode.find_bottom_left_tree_value import Solution
+    from leetcode.utils.binary_search_tree import make_tree
+
+    nums = [2, 1, 3]
+    print(f' Input: root = {nums}')
+    root = make_tree(nums, 0)
+    s = Solution()
+    x = s.findBottomLeftValue(root)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def find_largest_value_in_each_tree_row() -> None:
-    """Find Largetst Value in Each Tree Row."""
+    """515# Find Largetst Value in Each Tree Row."""
     from leetcode.find_largest_value_in_each_tree_row import Solution
     from leetcode.utils.binary_search_tree import make_tree
 
