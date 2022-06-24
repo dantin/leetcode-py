@@ -983,6 +983,20 @@ def most_frequent_substree_sum() -> None:
 
 
 @cli.command()
+def find_largest_value_in_each_tree_row() -> None:
+    """Find Largetst Value in Each Tree Row."""
+    from leetcode.find_largest_value_in_each_tree_row import Solution
+    from leetcode.utils.binary_search_tree import make_tree
+
+    nums = [1, 3, 2, 5, 3, None, 9]
+    print(f' Input: root = {nums}')
+    root = make_tree(nums, 0)
+    s = Solution()
+    x = s.largestValues(root)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def k_diff_pairs_in_an_array() -> None:
     """532# K Diff Pairs in an Array."""
     from leetcode.k_diff_pairs_in_an_array import Solution
