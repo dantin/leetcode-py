@@ -714,6 +714,18 @@ def spiral_matrix() -> None:
 
 
 @cli.command()
+def jump_game() -> None:
+    """55# Jump Game."""
+    from leetcode.jump_game import Solution
+
+    nums = [2, 3, 1, 1, 4]
+    print(f' Input: nums = {nums}')
+    s = Solution()
+    x = s.canJump(nums)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def merge_intervals() -> None:
     """56# Merge Intervals."""
     from leetcode.merge_intervals import Solution
