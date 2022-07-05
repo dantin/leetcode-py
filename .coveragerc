@@ -1,3 +1,4 @@
 [run]
 omit=
+  leetcode/__init__.py
   leetcode/cli.py
