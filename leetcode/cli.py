@@ -1454,6 +1454,18 @@ def defanging_an_ip_address() -> None:
 
 
 @cli.command()
+def minimum_absolute_difference() -> None:
+    """1200# Minimum Absolute Difference."""
+    from leetcode.minimum_absolute_difference import Solution
+
+    arr = [4, 2, 1, 3]
+    print(f' Input: arr = {arr}')
+    s = Solution()
+    x = s.minimumAbsDifference(arr)
+    print(f' Input: {x}')
+
+
+@cli.command()
 def all_elements_in_two_binary_search_trees() -> None:
     """1305# All Emements in Two Binary Search Trees."""
     from leetcode.all_elements_in_two_binary_search_trees import Solution
