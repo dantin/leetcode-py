@@ -1158,6 +1158,23 @@ def count_different_palindromic_subsequences() -> None:
 
 
 @cli.command()
+def my_calendar_i() -> None:
+    """729# My Calendar I."""
+    from leetcode.my_calendar_i import MyCalendar
+    cmds = ['MyCalendarThree', 'book', 'book', 'book']
+    params = [[], [10, 20], [15, 25], [20, 30]]
+    print(f'Input:\n{cmds}\n{params}')
+
+    s = MyCalendar()
+    output = [None]
+    for cmd, param in zip(cmds, params):
+        if cmd == 'book':
+            x = s.book(*param)
+            output.append(x)
+    print(f'Output:\n{output}')
+
+
+@cli.command()
 def my_calendar_iii() -> None:
     """732# My Calendar III."""
     from leetcode.my_calendar_iii import MyCalendarThree
