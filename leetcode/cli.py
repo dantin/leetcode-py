@@ -1193,6 +1193,18 @@ def my_calendar_iii() -> None:
 
 
 @cli.command()
+def parse_lisp_expression() -> None:
+    """736# Parse LISP expression."""
+    from leetcode.parse_lisp_expression import Solution
+
+    expression = '(let x 2 (mult x (let x 3 y 4 (add x y))))'
+    print(f' Input: expression = "{expression}"')
+    s = Solution()
+    x = s.evaluate(expression)
+    print(f'Output:\n{x}')
+
+
+@cli.command()
 def largest_triangle_area() -> None:
     """812# Largest Triangle Area."""
     from leetcode.largest_triangle_area import Solution
