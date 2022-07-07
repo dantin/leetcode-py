@@ -1060,6 +1060,19 @@ def tag_validator() -> None:
 
 
 @cli.command()
+def replace_words() -> None:
+    """648# Replace Words."""
+    from leetcode.replace_words import Solution
+
+    dictionary = ['cat', 'bat', 'rat']
+    sentence = 'the cattle was rattled by the battery'
+    print(f' Input: dictionary = {dictionary}, sentence = {sentence}')
+    s = Solution()
+    x = s.replaceWords(dictionary, sentence)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def kth_smallest_number_in_multiplication_table() -> None:
     """668# Kth Smallest Number in Multiplication Table."""
     from leetcode.kth_smallest_number_in_multiplication_table import Solution
