@@ -751,6 +751,18 @@ def insert_interval() -> None:
 
 
 @cli.command()
+def length_of_last_word() -> None:
+    """58# Length of Last Word."""
+    from leetcode.length_of_last_word import Solution
+
+    s = 'Hello World'
+    print(f' Input: s = {s}')
+    solution = Solution()
+    x = solution.lengthOfLastWord(s)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def permutation_sequence() -> None:
     """60# Permutation Sequence."""
     from leetcode.permutation_sequence import Solution
