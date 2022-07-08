@@ -1516,7 +1516,19 @@ def minimum_absolute_difference() -> None:
     print(f' Input: arr = {arr}')
     s = Solution()
     x = s.minimumAbsDifference(arr)
-    print(f' Input: {x}')
+    print(f' Output: {x}')
+
+
+@cli.command()
+def minimum_cost_to_move_chips_to_the_same_position() -> None:
+    """1217# Minimum Cost to Move Chips to The Same Position."""
+    from leetcode.minimum_cost_to_move_chips_to_the_same_position import Solution
+
+    position = [1, 2, 3]
+    print(f' Input: position = {position}')
+    s = Solution()
+    x = s.minCostToMoveChips(position)
+    print(f' Output: {x}')
 
 
 @cli.command()
