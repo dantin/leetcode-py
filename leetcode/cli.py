@@ -1218,6 +1218,20 @@ def my_calendar_iii() -> None:
 
 
 @cli.command()
+def cherry_pickup() -> None:
+    """741# Cherry Pickup."""
+    from leetcode.cherry_pickup import Solution
+
+    grid = [[0, 1, -1],
+            [1, 0, -1],
+            [1, 1, 1]]
+    print(f' Input: grid = {grid}')
+    s = Solution()
+    x = s.cherryPickup(grid)
+    print(f' Output: {x}')
+
+
+@cli.command()
 def parse_lisp_expression() -> None:
     """736# Parse LISP expression."""
     from leetcode.parse_lisp_expression import Solution
