@@ -53,7 +53,7 @@ def is_valid_ipv6(queryIP: str) -> bool:
             return False
 
         for j in range(last + 1, cur):
-            if not queryIP[j].isdigit() and not('a' <= queryIP[j].lower() <= 'f'):
+            if not queryIP[j].isdigit() and not ('a' <= queryIP[j].lower() <= 'f'):
                 return False
 
         last = cur
