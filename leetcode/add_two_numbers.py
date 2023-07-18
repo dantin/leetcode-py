@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
+from typing import Optional
 
 from leetcode.utils.singly_linked_list import ListNode
 
 
 class Solution:
-    def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
+    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
         val = 0
         dummy = ListNode()
         tail = dummy
