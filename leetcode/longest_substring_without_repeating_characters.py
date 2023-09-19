@@ -3,21 +3,21 @@
 
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
-        cache = {}
-        max_len, length = 0, 0
+        window = {}  # window represents a sliding window which contains char and its last position.
+        retval = 0   # retval is the length of longest substring.
+        length = 0   # length is the length of current substring.
         i = 0
+
         while i < len(s):
             c = s[i]
-            if c not in cache:
-                cache[c] = i
+            if c not in window:
+                window[c] = i
                 length += 1
                 i += 1
             else:
-                max_len = max(max_len, length)
-                i = cache[c] + 1
-                # reset state.
+                retval = max(retval, length)
+                i = window[c] + 1
                 length = 0
-                cache = {}
+                window = {}
 
-        max_len = max(max_len, length)
-        return max_len
+        return max(retval, length)
