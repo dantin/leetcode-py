@@ -26,4 +26,5 @@ class Solution:
             tail.next = ListNode(val % 10)
             val = val // 10
             tail = tail.next
+
         return dummy.next
