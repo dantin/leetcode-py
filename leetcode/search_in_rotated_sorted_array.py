@@ -7,20 +7,20 @@ class Solution:
         if not nums:
             return -1
 
-        left, right = 0, len(nums) - 1
-        while left <= right:
-            mid = (left + right) // 2
+        lo, hi = 0, len(nums) - 1
+        while lo <= hi:
+            mid = (lo + hi) // 2
             if nums[mid] == target:
                 return mid
 
-            if nums[0] <= nums[mid]:
-                if nums[0] <= target < nums[mid]:
-                    right = mid - 1
+            if nums[lo] <= nums[mid]:
+                if nums[lo] <= target < nums[mid]:
+                    hi = mid - 1
                 else:
-                    left = mid + 1
+                    lo = mid + 1
             else:
-                if nums[mid] < target <= nums[right]:
-                    left = mid + 1
+                if nums[mid] < target <= nums[hi]:
+                    lo = mid + 1
                 else:
-                    right = mid - 1
+                    hi = mid - 1
         return -1
