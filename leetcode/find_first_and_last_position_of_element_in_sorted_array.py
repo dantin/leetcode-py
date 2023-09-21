@@ -4,20 +4,18 @@ from typing import List
 
 class Solution:
     def searchRange(self, nums: List[int], target: int) -> List[int]:
-        def binary_search(nums: List[int], target: int, lower: bool) -> int:
-            left, right = 0, len(nums) - 1
-            x = len(nums)
-            while left <= right:
-                mid = (left + right) // 2
-                if nums[mid] > target or (lower and nums[mid] == target):
-                    right = mid - 1
-                    x = mid
+        def binary_search(nums: List[int], target: int, left: bool) -> int:
+            lo, hi = 0, len(nums)
+            while lo < hi:
+                mid = (lo + hi) // 2
+                if nums[mid] > target or (left and nums[mid] == target):
+                    hi = mid
                 else:
-                    left = mid + 1
-            return x
+                    lo = mid + 1
+            return lo
 
         left = binary_search(nums, target, True)
+        if left == len(nums) or nums[left] != target:
+            return [-1, -1]
         right = binary_search(nums, target, False) - 1
-        if left <= right and right < len(nums) and nums[left] == target and nums[right] == target:
-            return [left, right]
-        return [-1, -1]
+        return [left, right]
