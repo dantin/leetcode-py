@@ -2,16 +2,16 @@
 
 class Solution:
     def countAndSay(self, n: int) -> str:
-        pre, cur = '', '1'
+        preval, retval = '', '1'
 
         for _ in range(1, n):
-            pre, cur = cur, ''
+            preval, retval = retval, ''
 
             slow, fast = 0, 0
-            while fast < len(pre):
-                while fast < len(pre) and pre[fast] == pre[slow]:
+            while fast < len(preval):
+                while fast < len(preval) and preval[fast] == preval[slow]:
                     fast += 1
-                cur += f'{fast - slow}{pre[slow]}'
+                retval += f'{fast - slow}{preval[slow]}'
                 slow = fast
 
-        return cur
+        return retval
