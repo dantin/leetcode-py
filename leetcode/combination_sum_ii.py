@@ -1,29 +1,35 @@
 # -*- coding: utf-8 -*-
-import collections
 from typing import List
 
 
 class Solution:
     def combinationSum2(self, candidates: List[int], target: int) -> List[List[int]]:
-        def dfs(pos: int, total: int) -> None:
-            nonlocal nums
-            if total == 0:
-                combinations.append(nums[:])
+        def dfs(
+            begin: int,
+            end: int,
+            nums: List[int],
+            target: int
+        ) -> None:
+            if target == 0:
+                retval.append(nums[:])
                 return
-            if pos == len(freq) or total < freq[pos][0]:
+            if target < 0:
                 return
 
-            dfs(pos + 1, total)
+            i = begin
+            while i < end:
+                n = candidates[i]
+                nums.append(n)
+                dfs(i + 1, end, nums, target - n)
+                nums.pop()
+                while i < end - 1 and n == candidates[i + 1]:
+                    i += 1
+                i += 1
 
-            count = min(total // freq[pos][0], freq[pos][1])
-            for i in range(1, count + 1):
-                nums.append(freq[pos][0])
-                dfs(pos + 1, total - i * freq[pos][0])
-            nums = nums[:-count]
-
-        # freq is the sorted mapping of `(num, freq)`
-        freq = sorted(collections.Counter(candidates).items())
-        combinations = []
+        retval = []
+        if len(candidates) == 0 and target < 0:
+            return retval
+        candidates = sorted(candidates)
         nums = []
-        dfs(0, target)
-        return combinations
+        dfs(0, len(candidates), nums, target)
+        return retval
